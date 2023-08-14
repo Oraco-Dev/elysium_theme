@@ -1,0 +1,25 @@
+$sizes: (
+  "xxxs": 0.4,
+  "xxs": 0.8,
+  "xs": 1.2,
+  "base": 1.6,
+  "sm": 2.4,
+  "md": 3.2,
+  "lg": 4.8,
+  "xl": 6.4,
+  "xxl": 8,
+  "xxxl": 9.6,
+) !default;
+
+$breakpoints: (
+  "phone": 576px,
+  "tablet": 768px,
+  "desktop": 1200px,
+  "LGdesktop": 1920px,
+) !default;
+
+$fontweights: (
+  "light": 300,
+  "medium": 500,
+  "bold": 700,
+);

@@ -1,0 +1,97 @@
+@import "./vars";
+
+@mixin col($color) {
+  color: $color;
+}
+
+@mixin bg-col($color) {
+  background-color: $color;
+}
+
+@mixin bord($size, $type, $color) {
+  border: $size $type $color;
+}
+
+@mixin font-weight($sizeValue) {
+  font-weight: map-get($fontweights, $sizeValue);
+}
+
+@mixin bord-rad($sizeValue) {
+  border-radius: map-get($sizes, $sizeValue) + rem;
+  -moz-border-radius: map-get($sizes, $sizeValue) + rem;
+  -webkit-border-radius: map-get($sizes, $sizeValue) + rem;
+}
+
+@mixin dimensions($direction, $sizeValue) {
+  @if $direction == y {
+    height: $sizeValue;
+  } @else if $direction == x {
+    width: $sizeValue;
+  } @else if $direction == xy {
+    width: $sizeValue;
+    height: $sizeValue;
+  } @else {
+    @error "Property ($direction) must be x, y or xy.";
+  }
+}
+
+@mixin spacing($type, $direction, $sizeValue) {
+  @if $type == p {
+    @if $direction == xy {
+      padding: ($sizeValue) + rem;
+    } @else if $direction == t {
+      padding-top: ($sizeValue) + rem;
+    } @else if $direction == l {
+      padding-left: ($sizeValue) + rem;
+    } @else if $direction == r {
+      padding-right: ($sizeValue) + rem;
+    } @else if $direction == b {
+      padding-bottom: ($sizeValue) + rem;
+    } @else if $direction == x {
+      padding-right: ($sizeValue) + rem;
+      padding-left: ($sizeValue) + rem;
+    } @else if $direction == y {
+      padding-top: ($sizeValue) + rem;
+      padding-bottom: ($sizeValue) + rem;
+    } @else {
+      @error "Property #{$direction} must be either t, r, b , l, x, y or xy.";
+    }
+  } @else if $type == m {
+    @if $direction == xy {
+      margin: ($sizeValue) + rem;
+    } @else if $direction == t {
+      margin-top: ($sizeValue) + rem;
+    } @else if $direction == l {
+      margin-left: ($sizeValue) + rem;
+    } @else if $direction == r {
+      margin-right: ($sizeValue) + rem;
+    } @else if $direction == b {
+      margin-bottom: ($sizeValue) + rem;
+    } @else if $direction == x {
+      margin-right: ($sizeValue) + rem;
+      margin-left: ($sizeValue) + rem;
+    } @else if $direction == y {
+      margin-top: ($sizeValue) + rem;
+      margin-bottom: ($sizeValue) + rem;
+    } @else {
+      @error "Property #{$direction} must be either t, r, b , l, x, y or xy.";
+    }
+  } @else {
+    @error "Property #{$type} must be either m or p.";
+  }
+}
+
+@mixin fadeInUpEl($delayValue) {
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, transform;
+  transition-duration: 0.4s, 1.2s;
+  transition-delay: $delayValue + s;
+}
+
+@mixin fadeInUp() {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}

@@ -1,0 +1,32 @@
+#header {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+}
+
+.outer-header.top {
+  background-color: $primary-color;
+}
+
+.container.top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.outer-header.bottom {
+  background-color: $secondary-color;
+}
+
+.container.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inner-header.bottom {
+  padding: 40px 0px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

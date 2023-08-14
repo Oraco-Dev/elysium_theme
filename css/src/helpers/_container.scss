@@ -1,0 +1,19 @@
+@import "./breakpoints";
+@import "./mixins";
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100vw;
+  @include dimensions(x, 100%);
+  @include spacing(p, x, 2.5);
+
+  @include media(">=tablet") {
+    @include spacing(p, x, 5);
+  }
+
+  @include media(">=LGdesktop") {
+    @include spacing(p, x, 0);
+    max-width: 1700px;
+  }
+}
