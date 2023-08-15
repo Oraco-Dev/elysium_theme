@@ -16,28 +16,18 @@
 </head>
 
 
-<header id="header">
-  <!-- TOP HEADER -->
-  <div class="outer-header top">
-
-    <div class="container top">
-      <h4>ABC</h3>
-    </div>
-
-  </div>
-
-  <!-- BOTTOM HEADER -->
-  <div class="outer-header bottom">
-
-    <div class="container bottom">
-      <div class="inner-header bottom">
-        <image src="http://elancelocal.local/wp-content/uploads/2023/08/logo-1.png" />
-        <p>MENU HERE</p>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__inner-left">
+        <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/logo-1.png" />
+        <div>ABCDEFG</div>
+      </div>
+      <div class="header__inner-right">
+        <button>ABCDEFG</button>
       </div>
     </div>
-
   </div>
-
 </header>
 
 

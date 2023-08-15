@@ -1,32 +1,20 @@
-#header {
-  display: flex;
-  flex-direction: column;
-  color: $white;
-}
-
-.outer-header.top {
+.header {
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
   background-color: $primary-color;
-}
+  padding: 20px;
 
-.container.top {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.outer-header.bottom {
-  background-color: $secondary-color;
-}
-
-.container.bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.inner-header.bottom {
-  padding: 40px 0px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: $white;
+    }
+  }
 }
