@@ -1,0 +1,13 @@
+.category-badge {
+  background-color: $secondary-light;
+  padding: 12px 32px;
+  margin-right: 20px;
+  transition: all 300ms;
+  cursor: pointer;
+  font-family: $Poppins;
+
+  &.selected {
+    background-color: $secondary-color;
+    color: white;
+  }
+}

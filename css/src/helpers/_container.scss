@@ -9,7 +9,7 @@
   @include spacing(p, x, 2.5);
 
   @include media(">=tablet") {
-    @include spacing(p, x, 5);
+    @include spacing(p, x, 10);
   }
 
   @include media(">=LGdesktop") {

@@ -1,0 +1,53 @@
+.contact {
+  padding-top: 70px;
+  background-color: $secondary-light;
+  padding-bottom: 37.5px;
+
+  &__outer {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    margin-top: 40px;
+    padding: 60px;
+
+    &-left {
+      width: 100%;
+
+      @include media(">=desktop") {
+        width: 50%;
+      }
+
+      &-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        div {
+          display: flex;
+          gap: 10px;
+
+          div {
+            display: flex;
+            flex-direction: column;
+          }
+
+          img {
+            height: 40px;
+          }
+        }
+      }
+    }
+
+    &-right {
+      width: 100%;
+
+      @include media(">=desktop") {
+        width: 50%;
+      }
+    }
+
+    @include media(">=desktop") {
+      flex-direction: row;
+    }
+  }
+}

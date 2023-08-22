@@ -1,0 +1,35 @@
+.cta {
+  background-color: $secondary-light;
+  padding: 80px 0px;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include media(">=tablet") {
+      flex-direction: row;
+    }
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h4 {
+        color: $secondary-color;
+      }
+
+      p {
+        font-family: $Poppins;
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

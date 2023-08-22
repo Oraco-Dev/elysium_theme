@@ -1,0 +1,31 @@
+.blog {
+  width: 100%;
+  padding-bottom: 60px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+
+    @include media(">=tablet") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(">=desktop") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media(">=LGdesktop") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.blog-filter {
+  padding-top: 200px;
+  padding-bottom: 60px;
+
+  &__badges-badge {
+    padding-top: 20px;
+  }
+}

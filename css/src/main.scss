@@ -12,7 +12,22 @@
 
 // globals
 @import "./components/globals/header";
+@import "./components/globals/footer";
+@import "./components/globals/social-reel";
+@import "./components/globals/call-to-action";
 @import "./base";
+
+// cards
+@import "./components/cards/alt-box-right";
+@import "././components/cards/blog-card";
+@import "././components/cards/quick-links";
 
 // pages
 @import "./pages/front-page";
+@import "./pages/single";
+@import "./pages/blog";
+@import "./pages/contact";
+
+// components
+@import "./components/button/button";
+@import "./components/badges/category-badge";

@@ -138,4 +138,110 @@ function hide_comments_column_content($column_name, $post_id)
   }
 }
 
+// create custom post types - that act as pages
+function create_custom_post_types()
+{
+  // Social Impact Blogs Custom Post Type
+  register_post_type(
+    'social_impact',
+    array(
+      'labels' => array(
+        'name' => __('Social Impact - Blog'),
+        'singular_name' => __('Social Impact'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'social-impact'),
+      'menu_icon' => 'dashicons-admin-site',
+      'supports' => array('title', 'editor', 'thumbnail'),
+      'taxonomies' => array('category'),
+      // Add this line
+    )
+  );
+
+  // Business Services Custom Post Type
+  register_post_type(
+    'business_services',
+    array(
+      'labels' => array(
+        'name' => __('Business Services'),
+        'singular_name' => __('Business Service'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'business-services'),
+      'menu_icon' => 'dashicons-analytics',
+    )
+  );
+
+  // Personal Services Custom Post Type
+  register_post_type(
+    'personal_services',
+    array(
+      'labels' => array(
+        'name' => __('Personal Services'),
+        'singular_name' => __('Personal Service'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'personal-services'),
+      'menu_icon' => 'dashicons-businessman',
+    )
+  );
+}
+
+add_action('init', 'create_custom_post_types');
+
+// custom fields for custom post types
+function register_custom_fields()
+{
+  if (function_exists('acf_add_local_field_group')) {
+    acf_add_local_field_group(
+      array(
+        'key' => 'group_link_icon',
+        'title' => 'Link Icon',
+        'fields' => array(
+          array(
+            'key' => 'field_link_icon',
+            'label' => 'Link Icon',
+            'name' => 'link_icon',
+            'type' => 'image',
+            'instructions' => 'Upload or select an image for the link icon.',
+            'required' => true,
+            'return_format' => 'url',
+            'preview_size' => 'thumbnail',
+            'library' => 'all',
+          ),
+        ),
+        'location' => array(
+          array(
+            array(
+              'param' => 'post_type',
+              'operator' => '==',
+              'value' => 'business_services',
+            ),
+          ),
+          array(
+            array(
+              'param' => 'post_type',
+              'operator' => '==',
+              'value' => 'personal_services',
+            ),
+          ),
+        ),
+        'position' => 'acf_after_title',
+        // Adjust as needed
+      )
+    );
+  }
+}
+
+add_action('acf/init', 'register_custom_fields');
+
+function current_year_shortcode()
+{
+  return date('Y');
+}
+add_shortcode('current_year', 'current_year_shortcode');
+
 // END -- REMOVE COMMENTS

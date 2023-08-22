@@ -20,7 +20,7 @@
   <div class="container">
     <div class="header__inner">
       <div class="header__inner-left">
-        <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/logo-1.png" />
+        <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/logo-1-1.png" />
         <div>ABCDEFG</div>
       </div>
       <div class="header__inner-right">

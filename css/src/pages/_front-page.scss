@@ -1,4 +1,4 @@
-// FRONT PAGE BANNER
+// SECTION - BANNER
 
 .fp__banner {
   position: relative;
@@ -35,7 +35,7 @@
   }
 }
 
-// FRONT PAGE HELP
+// SECTION - HOW WE CAN HELP INTRO
 
 .fp__help {
   background-color: $secondary-light;
@@ -53,10 +53,11 @@
   }
 }
 
+// SECTION - BUSINESS SERVICES
+
 .fp__business {
   position: relative;
   height: fit-content;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,18 +84,28 @@
 
   &-card {
     display: flex;
-    height: 80vh;
+    flex-direction: column;
+    height: fit-content;
     width: 100%;
     background-color: $white;
     border-bottom: 8px $secondary-color solid;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
 
+    @include media(">=desktop") {
+      flex-direction: row;
+    }
+
     &-left {
       display: flex;
       flex-direction: column;
-      width: 50%;
+      height: fit-content;
+      width: 100%;
       padding: 60px 30px;
+
+      @include media(">=desktop") {
+        width: 50%;
+      }
 
       h3 {
         color: $primary-color;
@@ -103,6 +114,8 @@
 
       p {
         color: $secondary-color;
+        margin-bottom: 20px;
+        font-family: $Poppins;
       }
     }
 
@@ -122,19 +135,465 @@
   }
 }
 
+// SECTION - PERSONAL SERVICES
+
+.fp__personal {
+  position: relative;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $secondary-light;
+  padding-top: 100px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20vh;
+    width: 100vw;
+    background-color: $secondary-color;
+    z-index: 1;
+  }
+
+  &-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    background-color: $white;
+    border-bottom: 8px $secondary-color solid;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    z-index: 100;
+
+    &-img {
+      position: absolute;
+      top: -1.5%;
+      left: 2%;
+      width: 350px;
+
+      @include media(">=tablet") {
+        top: -3.5%;
+        left: 5.5%;
+        width: 500px;
+      }
+
+      @include media(">=desktop") {
+        top: -5%;
+        left: 4%;
+        width: 650px;
+      }
+
+      @include media(">=LGdesktop") {
+        top: -5%;
+        left: -2.5%;
+        width: 650px;
+      }
+    }
+
+    @include media(">=desktop") {
+      flex-direction: row;
+    }
+
+    &-left {
+      position: relative;
+      background-color: teal;
+      width: 50%;
+
+      @include media(">=desktop") {
+        width: 50%;
+      }
+
+      &-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      width: 100%;
+      padding: 60px 30px;
+
+      @include media(">=desktop") {
+        width: 50%;
+      }
+
+      h3 {
+        color: $primary-color;
+        padding-bottom: 20px;
+      }
+
+      p {
+        color: $secondary-color;
+        margin-bottom: 20px;
+        font-family: $Poppins;
+      }
+    }
+  }
+}
+
+// SECTION - BUSINESS & PERSONAL SERVICES GRID
+
 .fp-grid {
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
   width: 100%;
+  gap: 20px;
 
-  @include media(">=tablet") {
+  @include media(">=desktop") {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    background-color: aquamarine;
   }
 
   &__child {
+    display: flex;
+    align-items: center;
+    gap: 16px;
     width: 100%;
+    height: 100%;
+    padding: 30px;
+    background-color: $secondary-light;
+    transition: all 500ms;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $secondary-color;
+      cursor: pointer;
+      transition: all 500ms;
+      color: $white;
+    }
+
+    &:hover &-icon {
+      filter: brightness(0) invert(1);
+      transition: all 500ms;
+    }
+
+    &-icon {
+      height: 40px;
+    }
+
+    h5 {
+      font-family: $Poppins;
+      font-size: 16px !important;
+    }
   }
+}
+
+// SECTION - MEET THE TEAM
+
+.fp__team {
+  height: 70vh;
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  @include media(">=tablet") {
+    height: 80vh;
+  }
+
+  .container {
+    height: 100%;
+
+    @include media(">=desktop") {
+      height: auto;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    @include media(">=desktop") {
+      flex-direction: row;
+    }
+
+    &-left {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      height: 100%;
+      width: 100%;
+      gap: 40px;
+      color: $white;
+
+      @include media(">=desktop") {
+        justify-content: center;
+        padding: 100px;
+        width: 50%;
+      }
+    }
+
+    &-cta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      &-btn {
+        border: none;
+        padding: 24px 36px;
+        width: 300px;
+        background-color: rgb(255, 203, 144);
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    &-right {
+      position: relative;
+      display: flex;
+
+      width: 50%;
+
+      &-imgone,
+      &-imgtwo {
+        object-fit: cover;
+      }
+
+      &-imgone {
+        width: 100%;
+
+        @include media(">=desktop") {
+          width: auto;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: 2;
+        }
+      }
+
+      &-imgtwo {
+        width: 100%;
+        @include media(">=desktop") {
+          width: auto;
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// SECTION - REVIEWS
+
+.fp__review {
+  background-color: $secondary-light;
+
+  &-intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: $primary-color;
+  }
+}
+
+// SECTION - SOCIAL IMPACT
+
+.fp__impact {
+  background-color: $secondary-light;
+
+  &-intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: $primary-color;
+  }
+
+  &-blog {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include media(">=desktop") {
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    button {
+      display: flex;
+      font-size: 20px;
+      align-items: center;
+      width: fit-content;
+      gap: 20px;
+      background-color: transparent;
+      border: none;
+    }
+
+    &-btn-img {
+      height: 16px;
+    }
+
+    // post - 1
+    &-left {
+      position: relative;
+      width: 100%;
+      border-bottom: 8px solid $secondary-color;
+      transition: all 300ms;
+
+      &:hover {
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+          0 8px 10px -6px rgb(0 0 0 / 0.1);
+      }
+
+      @include media(">=desktop") {
+        width: 50%;
+      }
+
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      &-main {
+        background-color: $white;
+        height: 100%;
+
+        &-img {
+          width: 100%;
+          object-fit: cover;
+          height: 300px;
+        }
+
+        &-meta {
+          font-family: $Poppins;
+          padding: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          p {
+            font-size: 16px;
+          }
+
+          button {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    // post - 2 & 3
+    &-right {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      width: 100%;
+      position: relative;
+
+      @include media(">=desktop") {
+        margin-top: 0px;
+        width: 50%;
+      }
+
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      &-main {
+        height: 100%;
+        display: flex;
+        background-color: $white;
+        border-bottom: 8px solid $secondary-color;
+        transition: all 300ms;
+
+        &:hover {
+          box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+            0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        &-img {
+          width: 50%;
+          object-fit: cover;
+        }
+
+        &-meta {
+          font-family: $Poppins;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 20px;
+
+          button {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  &-more {
+    margin-top: 40px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.fp__news {
+  background-color: $secondary-light;
+  padding-top: 200px;
+
+  &-intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: $primary-color;
+  }
+
+  &-blog {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include media(">desktop") {
+      flex-direction: row;
+    }
+  }
+}
+
+.fp__assessment {
+  background-color: $secondary-light;
+  padding-top: 200px;
 }
 
 .dot {
@@ -143,4 +602,5 @@
   width: 30px;
   border-radius: 50%;
   margin-top: 30px;
+  margin-bottom: 30px;
 }

@@ -1,0 +1,34 @@
+.abr {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-bottom: 8px solid $secondary-color;
+  height: fit-content;
+
+  @include media(">=desktop") {
+    flex-direction: row;
+  }
+
+  &-left {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    padding: 50px;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    & .button {
+      margin-top: 40px;
+    }
+  }
+}
