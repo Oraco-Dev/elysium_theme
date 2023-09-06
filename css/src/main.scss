@@ -15,19 +15,24 @@
 @import "./components/globals/footer";
 @import "./components/globals/social-reel";
 @import "./components/globals/call-to-action";
+@import "./components/globals/map";
 @import "./base";
 
 // cards
 @import "./components/cards/alt-box-right";
+@import "./components/cards/alt-box-left";
 @import "././components/cards/blog-card";
 @import "././components/cards/quick-links";
 
 // pages
+@import "./pages/personal-service";
 @import "./pages/front-page";
 @import "./pages/single";
 @import "./pages/blog";
 @import "./pages/contact";
+@import "./pages/about";
 
 // components
 @import "./components/button/button";
 @import "./components/badges/category-badge";
+@import "./components/tabs/tabs";

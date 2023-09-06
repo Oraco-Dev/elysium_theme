@@ -89,7 +89,9 @@ $news_posts_query = new WP_Query(
 
         <div class="fp__banner-inner">
             <div class="container">
+
                 <h1 class="fp__banner-inner-title">Creating solutions for your future</h1>
+
             </div>
         </div>
     </section>
@@ -126,7 +128,7 @@ $news_posts_query = new WP_Query(
                                 $link_icon = get_field('link_icon');
 
                                 // Output the title and link_icon
-                                get_template_part('template-parts/services-card', null, array('title' => $title, 'link' => $link, 'linkIcon' => $link_icon));
+                                get_template_part('template-parts/services-card', null, array('title' => $title, 'link' => $link, 'linkIcon' => $link_icon, 'isTab' => false, 'index' => ''));
                             }
                             wp_reset_postdata(); // Reset the query
                         }
@@ -165,7 +167,7 @@ $news_posts_query = new WP_Query(
                                 $link_icon = get_field('link_icon');
 
                                 // Output the title and link_icon
-                                get_template_part('template-parts/services-card', null, array('title' => $title, 'link' => $link, 'linkIcon' => $link_icon));
+                                get_template_part('template-parts/services-card', null, array('title' => $title, 'link' => $link, 'linkIcon' => $link_icon, 'isTab' => false, 'index' => ''));
                             }
                             wp_reset_postdata(); // Reset the query
                         }
@@ -258,7 +260,7 @@ $news_posts_query = new WP_Query(
             </div>
             <div class="fp__impact-more">
                 <?php
-                get_template_part('template-parts/button/button', null, array('buttonText' => 'How We Can Help You', 'buttonLink' => ''));
+                get_template_part('template-parts/button/button', null, array('buttonText' => 'How We Can Help You', 'buttonLink' => '', 'imgHidden' => false));
                 ?>
             </div>
         </div>
@@ -311,11 +313,10 @@ $news_posts_query = new WP_Query(
     <section class="fp__assessment">
         <div class="container">
             <?php
-            get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $freeAssessmentTitle, 'imageUrl' => $freeAssessmentImage, 'content' => $freeAssessmentContent, 'buttonText' => $freeAssessmentButtonText, 'buttonLink' => $freeAssessmentButtonLink));
+            get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $freeAssessmentTitle, 'imageUrl' => $freeAssessmentImage, 'content' => $freeAssessmentContent, 'buttonText' => $freeAssessmentButtonText, 'buttonLink' => $freeAssessmentButtonLink, 'subtitle' => ''));
             ?>
         </div>
     </section>
-
 
     <?php
     get_template_part('template-parts/quick-links-box', null, array('iconOne' => $quickLinkIconOne, 'iconTwo' => $quickLinkIconTwo, 'iconThree' => $quickLinkIconThree, 'titleOne' => $quickLinkTitleOne, 'titleTwo' => $quickLinkTitleTwo, 'titleThree' => $quickLinkTitleThree, 'buttonOne' => $quickLinkButtonOne, 'buttonTwo' => $quickLinkButtonTwo, 'buttonThree' => $quickLinkButtonThree, 'linkOne' => $quickLinkOne, 'linkTwo' => $quickLinkTwo, 'linkThree' => $quickLinkThree, 'contentOne' => "", 'contentTwo' => "", 'contentThree' => ""));

@@ -2,13 +2,28 @@
   padding-top: 70px;
   background-color: $secondary-light;
   padding-bottom: 37.5px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10vh;
+    width: 100vw;
+    background-color: $primary-color;
+  }
 
   &__outer {
     display: flex;
     flex-direction: column;
     background-color: $white;
+    border-bottom: 8px solid $secondary-color;
     margin-top: 40px;
     padding: 60px;
+    position: relative;
+    gap: 80px;
+    z-index: 1000;
 
     &-left {
       width: 100%;
@@ -17,18 +32,44 @@
         width: 50%;
       }
 
-      &-icons {
+      &-intro {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        max-width: 500px;
+        color: $primary-color;
+
+        span {
+          font-size: 16px;
+          color: $secondary-color;
+          font-weight: 700;
+        }
+      }
+
+      &-icons {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
 
         div {
           display: flex;
           gap: 10px;
+          font-family: $Poppins;
+          color: $primary-color;
 
           div {
             display: flex;
             flex-direction: column;
+
+            h5 {
+              font-size: 20px;
+            }
+
+            a {
+              color: $primary-color;
+              font-size: 16px;
+            }
           }
 
           img {
@@ -39,6 +80,8 @@
     }
 
     &-right {
+      display: flex;
+      justify-content: flex-end;
       width: 100%;
 
       @include media(">=desktop") {
@@ -48,6 +91,121 @@
 
     @include media(">=desktop") {
       flex-direction: row;
+    }
+  }
+}
+
+// form
+#wpcf7-f180-o1 {
+  padding: 40px;
+  width: 100%;
+  background-color: $secondary-color;
+  font-family: $Poppins;
+  color: $white;
+
+  @include media(">=desktop") {
+    max-width: 500px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input {
+    padding: 10px;
+    transition: all 300ms;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    background-color: $secondary-light;
+    border: 2px solid $white;
+    outline: none;
+  }
+
+  input:focus,
+  textarea:focus {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+}
+
+.wpcf7-not-valid-tip {
+  color: $white;
+}
+
+.locations {
+  padding: 40px;
+  background-color: $primary-color;
+
+  &-outer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__intro {
+      color: $secondary-color;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+      gap: 30px;
+      padding: 10px;
+      margin-top: 40px;
+
+      @include media(">=tablet") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include media(">=desktop") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      &-item {
+        font-family: $Poppins;
+        color: $white;
+
+        &-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+          gap: 40px;
+          padding: 40px 80px;
+          background-color: $primary-light;
+
+          &-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+              height: 40px;
+            }
+
+            h4 {
+              font-size: 20px;
+            }
+          }
+
+          &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .button {
+              button {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

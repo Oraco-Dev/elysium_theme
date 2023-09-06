@@ -65,7 +65,7 @@ get_header();
             <div class="single-content__cta">
                 <h5>Want advice from an expert?</h5>
                 <?php
-                get_template_part('template-parts/button/button', null, array('buttonText' => 'Book Your Free Assessment', 'buttonLink' => ''));
+                get_template_part('template-parts/button/button', null, array('buttonText' => 'Book Your Free Assessment', 'buttonLink' => '', 'imgHidden' => false));
                 ?>
             </div>
         </div>
@@ -117,7 +117,7 @@ get_header();
 </section>
 
 <?php
-get_template_part('template-parts/call-to-action', null, array('' => ''));
+get_template_part('template-parts/call-to-action', null, array());
 ?>
 
 <?php

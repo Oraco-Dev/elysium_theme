@@ -1,11 +1,14 @@
 <?php
 $button_text = $args['buttonText'];
 $button_link = $args['buttonLink'];
-?>
+$img_hidden = $args['imgHidden']
+    ?>
 
 <a href="<?php echo $button_link ?>" class="button">
     <button>
         <?php echo $button_text ?>
     </button>
-    <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Group-385.png" class="button-img" />
+    <?php if (!$img_hidden): ?>
+        <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Group-385.png" class="button-img" />
+    <?php endif; ?>
 </a>

@@ -1,0 +1,93 @@
+.personal-services {
+  background-color: $secondary-light;
+  height: 100%;
+}
+
+.ps__banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  &-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 99;
+  }
+
+  &-inner {
+    height: fit-content;
+    width: 100%;
+    z-index: 99;
+
+    &-title {
+      color: $white;
+      transition: all 300ms;
+    }
+
+    &-subtitle {
+      color: $secondary-color;
+    }
+  }
+}
+
+.ps__tab {
+  display: flex;
+  flex-direction: column;
+  margin-top: -100px;
+  border-bottom: 8px solid $secondary-color;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  @include media(">=desktop") {
+    flex-direction: row;
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include media(">=desktop") {
+      width: 30%;
+    }
+  }
+
+  &-right {
+    width: 100%;
+    background-color: $white;
+    z-index: 100;
+    padding: 50px;
+
+    @include media(">=desktop") {
+      width: 70%;
+    }
+  }
+}
+
+.ps__boring {
+  margin-top: 100px;
+  background-color: $secondary-light;
+
+  &-intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: $primary-color;
+  }
+}

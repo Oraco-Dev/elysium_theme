@@ -263,6 +263,8 @@
     background-color: $secondary-light;
     transition: all 500ms;
     color: $primary-color;
+    z-index: 10000;
+    border: 2px solid white;
 
     &:hover {
       background-color: $secondary-color;

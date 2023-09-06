@@ -171,6 +171,8 @@ function create_custom_post_types()
       'has_archive' => true,
       'rewrite' => array('slug' => 'business-services'),
       'menu_icon' => 'dashicons-analytics',
+      'supports' => array('title', 'editor', 'thumbnail'),
+      // Supports featured image
     )
   );
 
@@ -186,6 +188,8 @@ function create_custom_post_types()
       'has_archive' => true,
       'rewrite' => array('slug' => 'personal-services'),
       'menu_icon' => 'dashicons-businessman',
+      'supports' => array('title', 'editor', 'thumbnail'),
+      // Supports featured image
     )
   );
 }

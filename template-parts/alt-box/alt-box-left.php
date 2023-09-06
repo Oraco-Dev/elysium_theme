@@ -7,16 +7,14 @@ $button_text = $args['buttonText'];
 $button_link = $args['buttonLink'];
 ?>
 
-<div class="abr">
-    <div class="abr-left" style="background-image: url(<?php echo $image_url ?>)">
-        <!-- <img src="<?php echo $image_url ?>" alt="Free Assesment Image" /> -->
-    </div>
-    <div class="abr-right">
-        <h2 class="abr-right__title">
+<div class="abl">
+
+    <div class="abl-left">
+        <h2 class="abl-left__title">
             <?php echo $title ?>
         </h2>
         <?php if ($subtitle): ?>
-            <h4 class="abr-right__subtitle">
+            <h4 class="abl-left__subtitle">
                 <?php echo $subtitle ?>
             </h4>
         <?php endif; ?>
@@ -28,5 +26,8 @@ $button_link = $args['buttonLink'];
             get_template_part('template-parts/button/button', null, array('buttonText' => $button_text, 'buttonLink' => $button_link, 'imgHidden' => false));
             ?>
         <?php endif; ?>
+    </div>
+    <div class="abl-right" style="background-image: url(<?php echo $image_url ?>)">
+
     </div>
 </div>
