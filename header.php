@@ -24,6 +24,12 @@ $headerNewsResourcesMenu = array(
   'menu_id' => 'header__inner-menu',
 );
 
+$mobileMenu = array(
+  'menu' => 'Mobile Menu',
+  // Specify the menu name here
+  'menu_class' => 'mobile__inner-menu-item',
+  'menu_id' => 'mobile__inner-menu',
+);
 ?>
 
 
@@ -48,6 +54,25 @@ $headerNewsResourcesMenu = array(
   <div class="menu">
     <div class="container">
       <div class="menu__inner">
+
+        <?php
+        wp_nav_menu($mobileMenu);
+        ?>
+        <div class="footer__socials">
+          <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/Xero-Certified-1.png"
+            class="footer__socials-xero" />
+          <div class="footer__socials-row">
+            <a href="https://www.instagram.com/elysiumaccounting/" target="_blank"><img
+                src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/instagram.png"
+                class="footer__socials-row-icon" /></a>
+            <a href="https://www.facebook.com/elysiumafs" target="_blank"><img
+                src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/facebook-02.png"
+                class="footer__socials-row-icon" /></a>
+            <a href="https://www.youtube.com/channel/UCmB8GbsEN3Zoa-98IFc9KDg" target="_blank"><img
+                src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/youtube.png"
+                class="footer__socials-row-icon" /></a>
+          </div>
+        </div>
 
       </div>
     </div>

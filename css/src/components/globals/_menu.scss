@@ -11,8 +11,14 @@
   overflow: auto;
   background-color: $primary-color;
   z-index: 100000;
+  width: 100vw;
 
   &__inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 40px;
   }
 
   &.close {
@@ -44,5 +50,23 @@
 
   100% {
     transform: translateY(0);
+  }
+}
+
+// mobile menu
+#mobile__inner-menu {
+  li {
+    margin-bottom: 24px;
+  }
+
+  li a {
+    color: $white;
+    font-family: $Poppins;
+    font-size: 24px;
+    transition: 300ms all linear;
+
+    &:hover {
+      color: $secondary-color;
+    }
   }
 }

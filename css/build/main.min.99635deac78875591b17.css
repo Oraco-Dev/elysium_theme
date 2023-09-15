@@ -46,7 +46,7 @@
   width: 100vw;
   z-index: 100000000;
   background-color: #1e3056;
-  padding: 20px;
+  padding: 20px 0px;
 }
 .header__inner {
   display: flex;
@@ -501,6 +501,14 @@
   overflow: auto;
   background-color: #1e3056;
   z-index: 100000;
+  width: 100vw;
+}
+.menu__inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 40px;
 }
 .menu.close {
   animation: hideMenu 0.9s cubic-bezier(0.405, 0, 0.025, 1);
@@ -528,6 +536,19 @@
     transform: translateY(0);
   }
 }
+#mobile__inner-menu li {
+  margin-bottom: 24px;
+}
+#mobile__inner-menu li a {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  transition: 300ms all linear;
+}
+#mobile__inner-menu li a:hover {
+  color: #fc8441;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
