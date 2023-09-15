@@ -136,10 +136,12 @@ $footerQuickLinksMenu = array(
                 <div class="footer__socials">
                     <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/Xero-Certified-1.png"
                         class="footer__socials-xero" />
+                    <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/logo-1-1.png"
+                        class="footer__socials-row-logo" />
                     <div class="footer__socials-row">
-                        <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/logo-1-1.png"
-                            class="footer__socials-row-logo" />
-                        <a href="https://www.instagram.com/elysiumaccounting/" target="_blank"><img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/instagram.png"
+
+                        <a href="https://www.instagram.com/elysiumaccounting/" target="_blank"><img
+                                src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/instagram.png"
                                 class="footer__socials-row-icon" /></a>
                         <a href="https://www.facebook.com/elysiumafs" target="_blank"><img
                                 src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/facebook-02.png"

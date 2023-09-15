@@ -116,7 +116,8 @@ get_header();
     <div class="about__banner-inner">
         <div class="container">
             <h5>About us</h5>
-            <h1 class="fp__banner-inner-title">Creating solutions for your future</h1>
+            <h1 class="about__banner-inner-title">We listen to our clients and provide timely, innovative solutions.
+            </h1>
             <div class="dot"></div>
         </div>
     </div>
@@ -149,7 +150,7 @@ get_header();
 <section class="about__team">
     <div class="container">
         <div class="about__team-intro">
-            <h2>Meet our team</h2>
+            <h2>Meet our Team</h2>
             <div class="dot">
             </div>
         </div>

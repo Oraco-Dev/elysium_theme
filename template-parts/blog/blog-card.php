@@ -1,4 +1,5 @@
 <?php
+$date = $args['date'];
 $is_home = $args['isHome'];
 $link = $args['link'];
 $title = $args['title'];
@@ -27,6 +28,9 @@ if (!$is_home) {
         <div class="blog-card__overlay"></div> <!-- Overlay for the image -->
     </div>
     <div class="blog-card__meta">
+        <h5>
+            <?php echo $date ?>
+        </h5>
         <h4>
             <?php echo $title ?>
         </h4>

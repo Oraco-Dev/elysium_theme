@@ -29,6 +29,12 @@
   padding-top: 200px;
   padding-bottom: 60px;
 
+  &__badges {
+    &-title {
+      color: $primary-color;
+    }
+  }
+
   &__badges-badge {
     padding-top: 20px;
   }

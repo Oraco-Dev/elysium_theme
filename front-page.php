@@ -107,7 +107,7 @@ $news_posts_query = new WP_Query(
     <section class="fp__help">
         <div class="container">
             <div class="fp__help-intro">
-                <h2>How We Can Help You</h2>
+                <h2>How We <br />Can Help You</h2>
                 <div class="dot">
                 </div>
             </div>
@@ -270,7 +270,7 @@ $news_posts_query = new WP_Query(
             </div>
             <div class="fp__impact-more">
                 <?php
-                get_template_part('template-parts/button/button', null, array('buttonText' => 'How We Can Help You', 'buttonLink' => '', 'imgHidden' => false));
+                get_template_part('template-parts/button/button', null, array('buttonText' => 'How we are Helping', 'buttonLink' => '', 'imgHidden' => false));
                 ?>
             </div>
         </div>
@@ -279,7 +279,7 @@ $news_posts_query = new WP_Query(
     <section class="fp__news">
         <div class="container">
             <div class="fp__news-intro">
-                <h2>News, Tips and Latest Articles</h2>
+                <h2>News, Tips and <br /> Latest Articles</h2>
                 <div class="dot"></div>
             </div>
             <div class="fp__news-blog">
@@ -318,6 +318,13 @@ $news_posts_query = new WP_Query(
                 }
                 ?>
             </div>
+            <div class="fp__news-btn">
+                <a href="https://elysiumafs.previewsite.com.au/blogs" target="_blank" class="fp__news-blog-btn">View all
+                    Latest News & Articles <img
+                        src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Arrow-1.png"
+                        class="blog-card__meta-img" /></a>
+            </div>
+
     </section>
 
     <section class="fp__assessment">

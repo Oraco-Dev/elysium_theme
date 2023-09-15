@@ -64,6 +64,7 @@
         padding: 40px;
         background-color: $primary-color;
         border-bottom: 6px solid $secondary-color;
+        max-width: 500px;
 
         h4 {
           font-family: $Poppins;
@@ -97,6 +98,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding-top: 40px;
     padding-bottom: 20px;
     color: $primary-color;
@@ -334,6 +336,7 @@
 
     h5 {
       font-family: $Poppins;
+      font-weight: 400;
       font-size: 16px !important;
     }
   }
@@ -402,8 +405,7 @@
         border: none;
         padding: 24px 36px;
         width: 300px;
-        border: 2px $white solid;
-        background-color: $secondary-color;
+        background-color: $secondary-alternate;
         color: $white;
         font-size: 20px;
         cursor: pointer;
@@ -536,6 +538,10 @@
           width: 100%;
         }
 
+        a {
+          color: $secondary-color;
+        }
+
         &-img {
           width: 100%;
           object-fit: cover;
@@ -555,6 +561,7 @@
           }
 
           button {
+            font-family: $Playfair;
             font-size: 16px;
             color: $secondary-color;
           }
@@ -607,6 +614,7 @@
 
       button {
         font-size: 16px;
+        font-family: $Playfair;
         color: $secondary-color;
       }
     }
@@ -627,6 +635,18 @@
   background-color: $secondary-light;
   padding-top: 200px;
 
+  &-btn {
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      color: $primary-color;
+      font-size: 24px;
+    }
+  }
   &-intro {
     width: 100%;
     display: flex;
@@ -665,8 +685,8 @@
 
 .dot {
   background-color: $secondary-color;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   margin-top: 30px;
   margin-bottom: 30px;

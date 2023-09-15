@@ -75,6 +75,7 @@ $allPostsQuery = new WP_Query($allPosts);
                         $featured_image_url = get_the_post_thumbnail_url(get_the_ID());
                         // Retrieve the categories assigned to the current post
                         $categories = get_the_category($post_id);
+                        $date = get_the_date();
 
 
                         // Create an array to store category names
@@ -90,7 +91,7 @@ $allPostsQuery = new WP_Query($allPosts);
                         // Converts array to json
                         $categoriesArray = json_encode($categoryNames);
 
-                        get_template_part('template-parts/blog/blog-card', null, array('link' => $link, 'title' => $title, 'imageUrl' => $featured_image_url, 'allCategories' => $categoriesArray, 'firstCategory' => '', 'isHome' => false));
+                        get_template_part('template-parts/blog/blog-card', null, array('link' => $link, 'title' => $title, 'imageUrl' => $featured_image_url, 'allCategories' => $categoriesArray, 'firstCategory' => '', 'isHome' => false, 'date' => $date));
                     }
                 } else {
                     "<h4> Oops, there doesn't seem to be any blogs right now.";

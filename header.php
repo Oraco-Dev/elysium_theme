@@ -109,7 +109,7 @@ $mobileMenu = array(
             <button class="header__inner-right-btn-blue header__inner-right-btn">Client Portal</button>
           </a>
           <button class="header__inner-right-btn-orange header__inner-right-btn modal-btn">
-            Get a free assesment
+            Get a Free Assesment
           </button>
         </div>
         <div class="hamburger">

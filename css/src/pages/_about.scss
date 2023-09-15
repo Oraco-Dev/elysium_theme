@@ -34,7 +34,8 @@
 
     &-title {
       color: $white;
-      max-width: 400px;
+      width: 70%;
+      max-width: 750px;
     }
   }
 }
@@ -77,6 +78,7 @@
   h3 {
     margin: 100px 0px 0px 0px;
     font-family: $primary-color;
+    color: $primary-color;
   }
 
   &-partners {
@@ -106,7 +108,7 @@
     }
 
     @include media(">=desktop") {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
 
     @include media(">=LGdesktop") {
@@ -128,7 +130,7 @@
     }
 
     @include media(">=desktop") {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
 
     @include media(">=LGdesktop") {
@@ -152,11 +154,13 @@
       padding: 20px 50px;
       margin-top: -3px;
       background-color: $secondary-light;
+      color: $primary-color;
 
       h5 {
         font-family: $Poppins;
         font-weight: 400;
         font-size: 20px;
+        color: $primary-color;
       }
     }
   }

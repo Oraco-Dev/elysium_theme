@@ -27,7 +27,7 @@ get_header();
     <div class="container">
         <div class="si__banner-inner">
             <div class="si__banner-inner__left">
-                <h5>About us</h5>
+                <h5>Social Impact</h5>
                 <h1 class="si__banner-inner-title">Elysium Social Impact</h1>
                 <div class="dot"></div>
             </div>
