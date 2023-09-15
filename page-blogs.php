@@ -9,7 +9,19 @@ get_header();
 include_once 'php/custom-functions.php';
 
 // GET POST CATEGORIES
-$categories = get_categories();
+$categories = get_terms(
+    array(
+        'taxonomy' => 'category',
+        'hide_empty' => 1,
+        'object_ids' => get_posts(
+            array(
+                'post_type' => 'post',
+                'posts_per_page' => -1,
+                'fields' => 'ids',
+            )
+        ),
+    )
+);
 
 $allPosts = array(
     'post_type' => 'post',
@@ -27,7 +39,7 @@ $allPostsQuery = new WP_Query($allPosts);
         <div class="blog-filter__inner">
             <div class="blog-filter__badges">
                 <div class="blog-filter__badges-title">
-                    <h4>Find helpful finance articles and tips</h4>
+                    <h3> Find helpful finance articles and tips</h3>
                     <div class="dot">
                     </div>
                 </div>
@@ -92,7 +104,11 @@ $allPostsQuery = new WP_Query($allPosts);
 </section>
 
 <?php
-get_template_part('template-parts/call-to-action', null, array('' => ''));
+get_template_part('template-parts/call-to-action', null, array());
+?>
+
+<?php
+get_template_part('template-parts/social-reel', null, array());
 ?>
 
 <?php get_footer() ?>

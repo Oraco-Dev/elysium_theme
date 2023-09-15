@@ -38,7 +38,7 @@ $contentThree = $args['contentThree'];
                 </a>
             <?php endif; ?>
             <?php if ($contentOne): ?>
-                <p>
+                <p class="ql__content">
                     <?php echo $contentOne ?>
                 </p>
             <?php endif; ?>
@@ -55,7 +55,7 @@ $contentThree = $args['contentThree'];
                 </a>
             <?php endif; ?>
             <?php if ($contentTwo): ?>
-                <p>
+                <p class="ql__content">
                     <?php echo $contentTwo ?>
                 </p>
             <?php endif; ?>
@@ -73,7 +73,6 @@ $contentThree = $args['contentThree'];
             <?php endif; ?>
             <?php if ($contentThree): ?>
                 <p>
-                    asdsda
                     <?php echo $contentThree ?>
                 </p>
             <?php endif; ?>

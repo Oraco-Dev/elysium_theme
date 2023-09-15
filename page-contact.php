@@ -48,11 +48,9 @@ get_header();
                 </div>
             </div>
             <div class="contact__outer-right">
-
-                <?php echo do_shortcode('[contact-form-7 id="286029a" title="Contact form 1"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="286029a" title="Contact"]'); ?>
             </div>
         </div>
-    </div>
 </section>
 
 <section class="locations">
@@ -71,7 +69,7 @@ get_header();
                         <div class="locations-outer__grid-item-container-content">
                             <p>1/2 Keith Campbell Court, Scoresby, VIC, 3179</p>
                             <?php
-                            get_template_part('template-parts/button/button', null, array('buttonText' => 'Get Directions', 'buttonLink' => '', 'imgHidden' => true));
+                            get_template_part('template-parts/button/button', null, array('buttonText' => 'Get Directions', 'buttonLink' => 'https://goo.gl/maps/M1QSJV6k3yMWNDkg8', 'imgHidden' => true));
                             ?>
                         </div>
                     </div>
@@ -85,7 +83,7 @@ get_header();
                         <div class="locations-outer__grid-item-container-content">
                             <p>Suite 9, 1 Milton Parade, Malvern, VIC, 3144</p>
                             <?php
-                            get_template_part('template-parts/button/button', null, array('buttonText' => 'Get Directions', 'buttonLink' => '', 'imgHidden' => true));
+                            get_template_part('template-parts/button/button', null, array('buttonText' => 'Get Directions', 'buttonLink' => 'https://goo.gl/maps/cJirhkomjttJmSq9A', 'imgHidden' => true));
                             ?>
                         </div>
                     </div>
@@ -99,7 +97,7 @@ get_header();
                         <div class="locations-outer__grid-item-container-content">
                             <p>130 Main Road, Monbulk, VIC, 3793</p>
                             <?php
-                            get_template_part('template-parts/button/button', null, array('buttonText' => 'Get Directions', 'buttonLink' => '', 'imgHidden' => true));
+                            get_template_part('template-parts/button/button', null, array('buttonText' => 'Get Directions', 'buttonLink' => 'https://goo.gl/maps/uXyzCuJ1oskWRbLv9', 'imgHidden' => true));
                             ?>
                         </div>
                     </div>

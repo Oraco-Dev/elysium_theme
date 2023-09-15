@@ -26,6 +26,12 @@
     width: 100%;
     z-index: 99;
 
+    h5 {
+      color: $secondary-color;
+      font-family: $Poppins;
+      font-weight: 400;
+    }
+
     &-title {
       color: $white;
       max-width: 400px;
@@ -44,10 +50,114 @@
     display: flex;
     flex-direction: column;
     gap: 100px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
 
   &__one {
     margin-top: -40px;
+  }
+}
+
+.about__team {
+  padding-top: 100px;
+
+  &-intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: $primary-color;
+  }
+}
+
+.about__people {
+  h3 {
+    margin: 100px 0px 0px 0px;
+    font-family: $primary-color;
+  }
+
+  &-partners {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include media(">=tablet") {
+      gap: 40px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(">=desktop") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    width: 100%;
+  }
+
+  &-admin {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(1, 1fr);
+    @include media(">=tablet") {
+      gap: 0px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(">=desktop") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media(">=LGdesktop") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    width: 100%;
+  }
+
+  &-bookkeeping {
+    display: grid;
+    gap: 40px;
+    margin-bottom: 100px;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include media(">=tablet") {
+      gap: 0px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(">=desktop") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media(">=LGdesktop") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    width: 100%;
+  }
+
+  &-card {
+    width: 100%;
+    margin-top: 40px;
+
+    &-img {
+      width: 100%;
+      padding: 0px 20px;
+      max-width: 800px;
+    }
+
+    &-name {
+      padding: 20px 50px;
+      margin-top: -3px;
+      background-color: $secondary-light;
+
+      h5 {
+        font-family: $Poppins;
+        font-weight: 400;
+        font-size: 20px;
+      }
+    }
   }
 }

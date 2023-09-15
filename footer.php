@@ -16,6 +16,12 @@ $personal_services_query = new WP_Query(
     )
 );
 
+$footerQuickLinksMenu = array(
+    'menu' => 'Footer - Quick Links',
+    'menu_class' => 'footer-quick-links__inner-menu-item',
+    'menu_id' => 'footer__quick-links',
+);
+
 ?>
 
 <!-- WORDPRESS TEMPLATE FOR FOOTER -->
@@ -122,22 +128,24 @@ $personal_services_query = new WP_Query(
                 <div>
                     <h5>Quick Links</h5>
                     <div class="footer__inner-col-links">
-                        <!-- Quick Links Here -->a
-                        <div>b</div>
-                        <div>b</div>
-                        <div>b</div>
-                        <div>b</div>
+                        <?php
+                        wp_nav_menu($footerQuickLinksMenu);
+                        ?>
                     </div>
                 </div>
                 <div class="footer__socials">
-                    <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/logo-1-1.png" />
+
+                    <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/Xero-Certified-1.png"
+                        class="footer__socials-xero" />
                     <div class="footer__socials-row">
-                        <a href=""><img
-                                src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/instagram.png" /></a>
-                        <a href=""><img
-                                src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/facebook-02.png" /></a>
-                        <a href=""><img
-                                src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/youtube.png" /></a>
+                        <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/logo-1-1.png"
+                            class="footer__socials-row-logo" />
+                        <a href=""><img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/instagram.png"
+                                class="footer__socials-row-icon" /></a>
+                        <a href=""><img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/facebook-02.png"
+                                class="footer__socials-row-icon" /></a>
+                        <a href=""><img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/youtube.png"
+                                class="footer__socials-row-icon" /></a>
                     </div>
                 </div>
             </div>

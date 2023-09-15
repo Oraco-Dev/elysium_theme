@@ -14,7 +14,6 @@ function theme_register_menus()
   register_nav_menus(
     array(
       'hamburger-menu' => 'Hamburger Menu',
-      // Replace 'primary-menu' with your menu location slug and 'Primary Menu' with the menu name.
     )
   );
 }
@@ -187,6 +186,39 @@ function create_custom_post_types()
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'personal-services'),
+      'menu_icon' => 'dashicons-filter',
+      'supports' => array('title', 'editor', 'thumbnail'),
+      // Supports featured image
+    )
+  );
+
+  register_post_type(
+    'staff_members',
+    array(
+      'labels' => array(
+        'name' => __('Staff Members'),
+        'singular_name' => __('Staff Member'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'staff-members'),
+      'menu_icon' => 'dashicons-businessman',
+      'supports' => array('title', 'editor', 'thumbnail'),
+      'taxonomies' => array('category'),
+      // Supports featured image
+    )
+  );
+
+  register_post_type(
+    'case_studies',
+    array(
+      'labels' => array(
+        'name' => __('Case Studies'),
+        'singular_name' => __('Case Study'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'case-studies'),
       'menu_icon' => 'dashicons-businessman',
       'supports' => array('title', 'editor', 'thumbnail'),
       // Supports featured image

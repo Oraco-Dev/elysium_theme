@@ -11,7 +11,7 @@
             </div>
             <div class="cta-content__right">
                 <?php
-                get_template_part('template-parts/button/button', null, array('buttonText' => 'Book Your Free Assessment', 'buttonLink' => '', 'imgHidden' => false));
+                get_template_part('template-parts/button/modalButton', null, array('buttonText' => 'Book Your Free Assessment', 'buttonLink' => '', 'imgHidden' => false));
                 ?>
             </div>
         </div>

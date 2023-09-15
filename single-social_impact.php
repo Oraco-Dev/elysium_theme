@@ -22,7 +22,6 @@ $category_ids[] = $postID;
 
 $recommendedPosts = new WP_Query(
     array(
-        'category__in' => $category_ids,
         'post__not_in' => array($postID),
         'posts_per_page' => 3,
         'orderby' => 'date',
@@ -42,10 +41,11 @@ get_header();
 
 <section class="single">
     <div class="container">
+
         <div class="single-intro">
             <a href="" class="single-intro__crumb">
                 <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Icon-2.png" alt="Back Arrow" />
-                <h5>Back to finance news</h5>
+                <h5>Back to social impact</h5>
             </a>
             <h2 class="single-intro__title">
                 <?php echo $title ?>

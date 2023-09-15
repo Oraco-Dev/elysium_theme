@@ -1,0 +1,48 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  transform: translateY(-150%);
+  cursor: auto;
+  overflow: auto;
+  background-color: $primary-color;
+  z-index: 100000;
+
+  &__inner {
+  }
+
+  &.close {
+    animation: hideMenu 0.9s cubic-bezier(0.405, 0, 0.025, 1);
+  }
+
+  &.open {
+    animation: showMenu 0.3s cubic-bezier(0.405, 0, 0.025, 1) forwards;
+  }
+}
+
+@keyframes hideMenu {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-150%);
+  }
+}
+
+@keyframes showMenu {
+  0% {
+    transform: translateY(-150%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -16,7 +16,7 @@ if (strlen($content) > $max_length) {
 
 
 <div class="fp__impact-blog-left-main">
-    <a href="<?php echo $link ?>" target="_blank" rel="noreferrer"></a>
+    <a href="<?php echo $link ?>" target="_blank" rel="noreferrer" class="fp__impact-blog-left-main-a"></a>
     <img src="<?php echo esc_url($image_url) ?>" class="fp__impact-blog-left-main-img" />
     <div class="fp__impact-blog-left-main-meta">
         <h5>

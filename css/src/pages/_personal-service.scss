@@ -38,6 +38,8 @@
 
     &-subtitle {
       color: $secondary-color;
+      font-family: $Poppins;
+      font-weight: 400;
     }
   }
 }
@@ -73,11 +75,28 @@
     @include media(">=desktop") {
       width: 70%;
     }
+
+    h3 {
+      color: $primary-color;
+    }
+
+    p,
+    h4 {
+      font-family: $Poppins;
+    }
+
+    h4 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: $secondary-color;
+      font-weight: 400;
+    }
   }
 }
 
 .ps__boring {
-  margin-top: 100px;
+  padding-top: 100px;
   background-color: $secondary-light;
 
   &-intro {
@@ -86,8 +105,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding-top: 40px;
     padding-bottom: 20px;
     color: $primary-color;
   }
+}
+
+.ps__alt-box {
+  margin-bottom: 100px;
 }

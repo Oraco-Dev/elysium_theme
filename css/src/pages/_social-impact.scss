@@ -1,0 +1,139 @@
+.si__banner {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1%;
+    margin-top: 100px;
+
+    &__left {
+      width: 100%;
+
+      @include media(">=desktop") {
+        width: 49%;
+      }
+
+      h5 {
+        color: $secondary-color;
+        font-family: $Poppins;
+        font-weight: 400;
+      }
+
+      h1 {
+        color: $primary-color;
+      }
+    }
+
+    &__right {
+      width: 100%;
+      @include media(">=desktop") {
+        width: 49%;
+      }
+
+      img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.si__posts {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  color: $primary-color;
+
+  @include media(">=desktop") {
+    padding-top: 0px;
+  }
+
+  button {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    width: fit-content;
+    gap: 20px;
+    background-color: transparent;
+    border: none;
+    color: $secondary-color;
+  }
+
+  &-btn-img {
+    height: 16px;
+  }
+
+  &-right {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    position: relative;
+
+    @include media(">=desktop") {
+      margin-top: 0px;
+      width: 50%;
+    }
+
+    &-main {
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      background-color: $secondary-light;
+      border-bottom: 8px solid $secondary-color;
+      transition: all 300ms;
+
+      @include media(">=desktop") {
+        flex-direction: row;
+      }
+
+      &:hover {
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+          0 8px 10px -6px rgb(0 0 0 / 0.1);
+      }
+
+      &-img {
+        padding: 20px;
+        width: 100%;
+        object-fit: cover;
+
+        @include media(">=desktop") {
+          width: 50%;
+        }
+      }
+
+      &-meta {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        font-family: $Poppins;
+
+        &-date {
+          font-family: $Poppins;
+          color: $secondary-color;
+        }
+
+        &-content {
+          font-family: $Poppins;
+        }
+
+        button {
+          margin-top: 20px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

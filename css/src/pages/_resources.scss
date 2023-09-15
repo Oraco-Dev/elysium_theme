@@ -1,0 +1,75 @@
+.rs__help {
+  background-color: $secondary-light;
+  padding-top: 100px;
+  &-intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: $primary-color;
+  }
+}
+
+.rs__resources {
+  padding: 60px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    @include media(">=desktop") {
+    }
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    color: $primary-color;
+
+    h5,
+    a {
+      font-family: $Poppins;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    a {
+      color: $secondary-color;
+    }
+  }
+
+  &-links {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include media(">=desktop") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-left,
+    &-right {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        h5 {
+          color: $secondary-color;
+          font-family: $Poppins;
+          font-weight: 400;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

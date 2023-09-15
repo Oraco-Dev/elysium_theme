@@ -24,13 +24,63 @@
   }
 
   &-inner {
-    height: fit-content;
+    padding-top: 50px;
     width: 100%;
     z-index: 99;
 
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include media(">=desktop") {
+        flex-direction: row;
+        gap: 60px;
+      }
+    }
+
+    &-left {
+      width: 100%;
+
+      @include media(">=desktop") {
+        width: 50%;
+        display: flex;
+        align-self: center;
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+      @include media(">=desktop") {
+        width: 50%;
+      }
+
+      &-form {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        background-color: $primary-color;
+        border-bottom: 6px solid $secondary-color;
+
+        h4 {
+          font-family: $Poppins;
+          margin-bottom: 10px;
+          color: $secondary-color;
+          font-weight: 400;
+        }
+      }
+    }
+
     &-title {
       color: $white;
-      max-width: 400px;
+      width: 100%;
+
+      @include media(">=desktop") {
+        max-width: 400px;
+      }
     }
   }
 }
@@ -326,7 +376,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-
+      padding-top: 40px;
       height: 100%;
       width: 100%;
       gap: 40px;
@@ -336,6 +386,10 @@
         justify-content: center;
         padding: 100px;
         width: 50%;
+      }
+
+      p {
+        font-family: $Poppins;
       }
     }
 
@@ -348,9 +402,16 @@
         border: none;
         padding: 24px 36px;
         width: 300px;
-        background-color: rgb(255, 203, 144);
+        border: 2px $white solid;
+        background-color: $secondary-color;
+        color: $white;
         font-size: 20px;
         cursor: pointer;
+        transition: 300ms all;
+
+        &:hover {
+          scale: (0.95);
+        }
       }
     }
 
@@ -463,17 +524,17 @@
         width: 50%;
       }
 
-      a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-      }
-
       &-main {
         background-color: $white;
         height: 100%;
+
+        &-a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+        }
 
         &-img {
           width: 100%;
@@ -487,6 +548,7 @@
           display: flex;
           flex-direction: column;
           gap: 20px;
+          color: $primary-color;
 
           p {
             font-size: 16px;
@@ -494,6 +556,7 @@
 
           button {
             font-size: 16px;
+            color: $secondary-color;
           }
         }
       }
@@ -512,44 +575,39 @@
         margin-top: 0px;
         width: 50%;
       }
+    }
+  }
 
-      a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-      }
+  // 2 & 3 blogs - social impact
+  .fp__impact-card {
+    height: 100%;
+    display: flex;
+    background-color: $white;
+    border-bottom: 8px solid $secondary-color;
+    transition: all 300ms;
 
-      &-main {
-        height: 100%;
-        display: flex;
-        background-color: $white;
-        border-bottom: 8px solid $secondary-color;
-        transition: all 300ms;
+    &:hover {
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
 
-        &:hover {
-          box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-            0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
+    &-img {
+      width: 50%;
+      object-fit: cover;
+    }
 
-        &-img {
-          width: 50%;
-          object-fit: cover;
-        }
+    &-meta {
+      font-family: $Poppins;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      color: $primary-color;
 
-        &-meta {
-          font-family: $Poppins;
-          padding: 20px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 20px;
-
-          button {
-            font-size: 16px;
-          }
-        }
+      button {
+        font-size: 16px;
+        color: $secondary-color;
       }
     }
   }
@@ -587,6 +645,12 @@
     flex-direction: column;
     gap: 40px;
 
+    a {
+      border-bottom: 8px solid $secondary-color;
+      height: 100%;
+      flex: 1;
+    }
+
     @include media(">desktop") {
       flex-direction: row;
     }
@@ -596,6 +660,7 @@
 .fp__assessment {
   background-color: $secondary-light;
   padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .dot {

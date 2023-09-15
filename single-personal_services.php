@@ -62,7 +62,7 @@ $personal_services_query = new WP_Query(
 
         <div class="ps__banner-inner">
             <div class="container">
-                <h4 class="ps__banner-inner-subtitle">Personal Services</h4>
+                <h5 class="ps__banner-inner-subtitle">Personal Services</h5>
                 <h1 class="ps__banner-inner-title">
                     <?php
                     if ($personal_services_query->have_posts()) {
@@ -146,11 +146,13 @@ $personal_services_query = new WP_Query(
         </div>
     </section>
 
-    <div class="container">
-        <?php
-        get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $baTitle, 'imageUrl' => $baImage, 'content' => $baContent, 'buttonText' => $baBtnText, 'buttonLink' => $baBtnLink, 'subtitle' => $baSubtitle));
-        ?>
-    </div>
+    <section class="ps__alt-box">
+        <div class="container">
+            <?php
+            get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $baTitle, 'imageUrl' => $baImage, 'content' => $baContent, 'buttonText' => '', 'buttonLink' => '', 'subtitle' => $baSubtitle, 'isModalBtn' => true));
+            ?>
+        </div>
+    </section>
 
     <?php
     get_template_part('template-parts/quick-links-box', null, array('iconOne' => $quickLinkIconOne, 'iconTwo' => $quickLinkIconTwo, 'iconThree' => $quickLinkIconThree, 'titleOne' => $quickLinkTitleOne, 'titleTwo' => $quickLinkTitleTwo, 'titleThree' => $quickLinkTitleThree, 'buttonOne' => $quickLinkButtonOne, 'buttonTwo' => $quickLinkButtonTwo, 'buttonThree' => $quickLinkButtonThree, 'linkOne' => $quickLinkOne, 'linkTwo' => $quickLinkTwo, 'linkThree' => $quickLinkThree, 'contentOne' => "", 'contentTwo' => "", 'contentThree' => ""));

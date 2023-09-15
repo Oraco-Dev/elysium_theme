@@ -129,14 +129,14 @@
   // social links
   &__socials {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 20px;
     width: 100%;
     padding-top: 20px;
 
-    img {
-      width: 45%;
-      max-width: 100px;
+    &-xero {
+      width: 200px;
     }
 
     &-row {
@@ -144,7 +144,12 @@
       align-items: center;
       gap: 8px;
 
-      img {
+      &-logo {
+        width: 100%;
+        max-width: 150px;
+      }
+
+      &-icon {
         height: 28px;
         width: 28px;
       }
@@ -175,5 +180,11 @@
       font-size: 16px;
       margin-left: 10px;
     }
+  }
+}
+
+#footer__quick-links {
+  li {
+    margin-bottom: 12px;
   }
 }

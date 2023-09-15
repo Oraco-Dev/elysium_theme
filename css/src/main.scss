@@ -16,6 +16,8 @@
 @import "./components/globals/social-reel";
 @import "./components/globals/call-to-action";
 @import "./components/globals/map";
+@import "./components/globals/modal";
+@import "./components/globals/menu";
 @import "./base";
 
 // cards
@@ -31,8 +33,12 @@
 @import "./pages/blog";
 @import "./pages/contact";
 @import "./pages/about";
+@import "./pages/social-impact";
+@import "./pages/case-studies";
+@import "./pages/resources";
 
 // components
 @import "./components/button/button";
 @import "./components/badges/category-badge";
 @import "./components/tabs/tabs";
+@import "./components/forms/forms";

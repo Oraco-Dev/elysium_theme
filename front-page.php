@@ -4,6 +4,9 @@
 // homepage post ID
 $postID = 36;
 
+// featured image URL
+$featured_image_url = get_the_post_thumbnail_url($postID, 'full');
+
 // free assesment section
 $freeAssessmentContent = get_field('free_assessment_content', $postID);
 $freeAssessmentTitle = get_field('free_assessment_title', $postID);
@@ -83,15 +86,20 @@ $news_posts_query = new WP_Query(
 <main class="front-page">
     <section class="fp__banner">
         <div class="fp__banner-overlay"></div>
-        <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/towfiqu-barbhuiya-JhevWHCbVyw-unsplash-1-min-2-scaled.jpg"
-            alt="" class="fp__banner-img" />
+        <img src="<?php echo $featured_image_url ?>" alt="" class="fp__banner-img" />
 
 
         <div class="fp__banner-inner">
             <div class="container">
-
-                <h1 class="fp__banner-inner-title">Creating solutions for your future</h1>
-
+                <div class="fp__banner-inner-left">
+                    <h1 class="fp__banner-inner-title">Creating solutions for your future</h1>
+                </div>
+                <div class="fp__banner-inner-right">
+                    <div class="fp__banner-inner-right-form">
+                        <h4>Book your free assesment</h4>
+                        <?php echo do_shortcode('[contact-form-7 id="38c0bfc" title="Home"]'); ?>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -136,7 +144,7 @@ $news_posts_query = new WP_Query(
                     </div>
                 </div>
                 <div class="fp__business-card-right">
-                    <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/towfiqu-barbhuiya-JhevWHCbVyw-unsplash-1-min-2-scaled.jpg"
+                    <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/shutterstock_1887386134-2-1.png"
                         alt="" class="fp__business-card-right-img" />
                 </div>
             </div>
@@ -149,7 +157,7 @@ $news_posts_query = new WP_Query(
                 class="fp__personal-card-img" />
             <div class="fp__personal-card">
                 <div class="fp__personal-card-left">
-                    <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/towfiqu-barbhuiya-JhevWHCbVyw-unsplash-1-min-2-scaled.jpg"
+                    <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/AdobeStock_131211901_Preview-1.png"
                         alt="" class="fp__personal-card-left-img" />
                 </div>
                 <div class="fp__personal-card-right">
@@ -210,6 +218,7 @@ $news_posts_query = new WP_Query(
                 </div>
             </div>
             <div class="fp__review-cards">
+                <?php do_action('wprev_pro_plugin_action', 1); ?>
                 <!-- ADD SHORTCODE HERE FOR GOOGLE REVIEWS -->
             </div>
         </div>
@@ -241,6 +250,7 @@ $news_posts_query = new WP_Query(
                     ?>
                 </div>
                 <div class="fp__impact-blog-right">
+
                     <?php
                     if ($social_impact_secondary_query->have_posts()) {
                         while ($social_impact_secondary_query->have_posts()) {
@@ -251,7 +261,7 @@ $news_posts_query = new WP_Query(
                             $image_url = get_the_post_thumbnail_url(get_the_ID());
 
 
-                            get_template_part('template-parts/social-impact/secondary-card', null, array('title' => $title, 'link' => $link, 'imageUrl' => $image_url, 'content' => $content));
+                            get_template_part('template-parts/social-impact/secondary-card-fp', null, array('title' => $title, 'link' => $link, 'imageUrl' => $image_url));
                         }
                         wp_reset_postdata(); // Reset the query
                     }
@@ -313,7 +323,7 @@ $news_posts_query = new WP_Query(
     <section class="fp__assessment">
         <div class="container">
             <?php
-            get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $freeAssessmentTitle, 'imageUrl' => $freeAssessmentImage, 'content' => $freeAssessmentContent, 'buttonText' => $freeAssessmentButtonText, 'buttonLink' => $freeAssessmentButtonLink, 'subtitle' => ''));
+            get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $freeAssessmentTitle, 'imageUrl' => $freeAssessmentImage, 'content' => $freeAssessmentContent, 'buttonText' => $freeAssessmentButtonText, 'buttonLink' => '', 'subtitle' => '', 'isModalBtn' => true));
             ?>
         </div>
     </section>

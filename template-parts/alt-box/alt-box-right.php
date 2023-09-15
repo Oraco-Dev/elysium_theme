@@ -5,6 +5,7 @@ $content = $args['content'];
 $image_url = $args['imageUrl'];
 $button_text = $args['buttonText'];
 $button_link = $args['buttonLink'];
+$modal_button = $args['isModalBtn'];
 ?>
 
 <div class="abr">
@@ -23,9 +24,14 @@ $button_link = $args['buttonLink'];
         <p>
             <?php echo $content ?>
         </p>
-        <?php if ($button_text): ?>
+        <?php if (!$modal_button && $button_text): ?>
             <?php
             get_template_part('template-parts/button/button', null, array('buttonText' => $button_text, 'buttonLink' => $button_link, 'imgHidden' => false));
+            ?>
+        <?php endif; ?>
+        <?php if ($modal_button): ?>
+            <?php
+            get_template_part('template-parts/button/modalButton', null, array('buttonText' => 'Book Your Free Assessment', 'buttonLink' => '', 'imgHidden' => false));
             ?>
         <?php endif; ?>
     </div>
