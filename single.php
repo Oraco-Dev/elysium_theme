@@ -14,6 +14,8 @@ $author = get_the_author_meta('display_name', $authorID);
 $authorAvatar = get_avatar($authorID);
 $date = get_post_field('post_date', $postID);
 $formattedDate = date('d/m/y', strtotime($date));
+$dateObj = DateTime::createFromFormat('d/m/y', $formattedDate);
+$formattedDateFinal = $dateObj->format('d M Y');
 $content = get_the_content($postID);
 $categories = get_the_category(); // Get the current post's categories
 // Extract category IDs and remove duplicates
@@ -51,7 +53,7 @@ get_header();
                 <?php echo $title ?>
             </h2>
             <span class="single-intro__date">
-                <?php echo $formattedDate ?>
+                <?php echo $formattedDateFinal ?>
             </span>
             <img src="<?php echo $featured_image_url ?>" />
         </div>
@@ -63,8 +65,9 @@ get_header();
             </div>
             <div class="single-content__cta">
                 <h5>Want advice from an expert?</h5>
+                <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Vector-1.png" />
                 <?php
-                get_template_part('template-parts/button/modalButton', null, array('buttonText' => 'Book Your Free Assessment', 'buttonLink' => '', 'imgHidden' => false));
+                get_template_part('template-parts/button/modalButton', null, array('buttonText' => 'Claim Your Free Assessment', 'buttonLink' => '', 'imgHidden' => true));
                 ?>
             </div>
         </div>

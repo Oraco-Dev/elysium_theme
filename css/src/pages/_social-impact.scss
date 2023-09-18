@@ -119,6 +119,10 @@
         gap: 5px;
         font-family: $Poppins;
 
+        a {
+          color: $secondary-color;
+        }
+
         &-date {
           font-family: $Poppins;
           color: $secondary-color;

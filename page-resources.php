@@ -21,10 +21,10 @@ get_header();
 <section class="rs__resources">
     <div class="container">
         <div class="rs__resources-title">
-            <h3>Helpful financial links and documents</h4>
-                <h5>We have handpicked some financial resources we believe you might find helpful. Please feel free to
-                    <a>contact us</a> to discuss anything.
-                </h5>
+            <h3>Helpful financial links and documents</h3>
+            <h5>We have handpicked some financial resources we believe you might find helpful. Please feel free to
+                <a>contact us</a> to discuss anything.
+            </h5>
         </div>
         <div class="rs__resources-links">
             <div class="rs__resources-links-left">

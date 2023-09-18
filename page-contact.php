@@ -43,8 +43,11 @@ get_header();
                             <a><span>PO Box 9249, Scoresby, 3179</span></a>
                         </div>
                     </div>
-                </div>
-                <div>
+                    <div class="contact__outer-left-more">
+                        <a href="#our-locations">See our locations</a>
+                        <img
+                            src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/icons8-down-arrow-50.png" />
+                    </div>
                 </div>
             </div>
             <div class="contact__outer-right">
@@ -56,6 +59,7 @@ get_header();
 <section class="locations">
     <div class="container">
         <div class="locations-outer">
+            <div id="our-locations"></div>
             <div class="locations-outer__intro">
                 <h3>Our Locations</h3>
             </div>

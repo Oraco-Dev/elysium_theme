@@ -15,12 +15,15 @@
 
 .rs__resources {
   padding: 60px;
+  background-color: $secondary-light;
   .container {
     display: flex;
     flex-direction: column;
     background-color: white;
+    padding: 40px;
 
     @include media(">=desktop") {
+      padding: 200px;
     }
   }
 
@@ -30,6 +33,11 @@
     gap: 20px;
     text-align: center;
     color: $primary-color;
+    padding-bottom: 80px;
+
+    h3 {
+      padding-bottom: 20px;
+    }
 
     h5,
     a {

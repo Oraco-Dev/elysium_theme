@@ -122,7 +122,14 @@ $personal_services_query = new WP_Query(
 
                             $content = get_the_content();
 
-                            echo '<div class="tab" id="tab-' . $index . '-content">' . $content . '</div>';
+                            $tab_content = '<div class="tab" id="tab-' . $index . '-content">' . $content;
+
+                            ob_start(); // Start output buffering
+                            get_template_part('template-parts/button/modalButton', null, array('buttonText' => 'Book Your Free Assessment', 'buttonLink' => '', 'imgHidden' => false));
+                            $cta_content = ob_get_clean(); // Get the output and clear the buffer
+                    
+                            $tab_content .= $cta_content . '</div>';
+                            echo $tab_content;
 
                             $index++;
                         }
@@ -139,7 +146,7 @@ $personal_services_query = new WP_Query(
     <section class="ps__boring">
         <div class="container">
             <div class="ps__boring-intro">
-                <h2>Not just your boring accountants</h2>
+                <h2>Not just your boring<br /> accountants</h2>
                 <div class="dot">
                 </div>
             </div>

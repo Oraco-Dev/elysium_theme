@@ -1648,6 +1648,7 @@ a {
   gap: 20px;
   margin-top: 40px;
   padding: 20px;
+  color: #1e3056;
 }
 @media (min-width: 1200px) {
   .single-intro {
@@ -1698,6 +1699,7 @@ a {
 @media (min-width: 1200px) {
   .single-content__text {
     width: 75%;
+    padding-right: 100px;
   }
 }
 .single-content__cta {
@@ -1717,12 +1719,17 @@ a {
 @media (min-width: 1200px) {
   .single-content__cta {
     width: 25%;
+    align-items: flex-end;
   }
+}
+.single-content__cta img {
+  width: 40px;
+  height: 40px;
 }
 
 .single-more {
   background-color: #fdeee6;
-  padding-bottom: 37.5px;
+  padding-bottom: 100px;
   position: relative;
 }
 .single-more:after {
@@ -1730,7 +1737,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 20vh;
+  height: 30vh;
   width: 100vw;
   background-color: #fc8441;
   z-index: 1;
@@ -1742,6 +1749,7 @@ a {
   justify-content: center;
   padding-top: 100px;
   padding-bottom: 40px;
+  color: #1e3056;
 }
 .single-more__blogs {
   display: grid;
@@ -1845,6 +1853,19 @@ a {
     padding: 60px;
   }
 }
+.contact__outer-left-more {
+  display: flex;
+  flex-direction: column;
+}
+.contact__outer-left-more a {
+  font-family: "Playfair Display", serif;
+  color: #fc8441;
+  font-size: 20px;
+}
+.contact__outer-left-more img {
+  height: 80px;
+  width: 40px;
+}
 .contact__outer-left-intro {
   display: flex;
   flex-direction: column;
@@ -1853,9 +1874,10 @@ a {
   color: #1e3056;
 }
 .contact__outer-left-intro span {
-  font-size: 16px;
+  font-size: 24px;
   color: #fc8441;
-  font-weight: 700;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 .contact__outer-left-icons {
   padding-top: 40px;
@@ -1921,6 +1943,7 @@ a {
   gap: 30px;
   padding: 10px;
   margin-top: 40px;
+  margin-bottom: 60px;
 }
 @media (min-width: 768px) {
   .locations-outer__grid {
@@ -2238,6 +2261,9 @@ a {
   gap: 5px;
   font-family: "Poppins", sans-serif;
 }
+.si__posts-right-main-meta a {
+  color: #fc8441;
+}
 .si__posts-right-main-meta-date {
   font-family: "Poppins", sans-serif;
   color: #fc8441;
@@ -2297,11 +2323,18 @@ a {
 
 .rs__resources {
   padding: 60px;
+  background-color: #fdeee6;
 }
 .rs__resources .container {
   display: flex;
   flex-direction: column;
   background-color: white;
+  padding: 40px;
+}
+@media (min-width: 1200px) {
+  .rs__resources .container {
+    padding: 200px;
+  }
 }
 .rs__resources-title {
   display: flex;
@@ -2309,6 +2342,10 @@ a {
   gap: 20px;
   text-align: center;
   color: #1e3056;
+  padding-bottom: 80px;
+}
+.rs__resources-title h3 {
+  padding-bottom: 20px;
 }
 .rs__resources-title h5,
 .rs__resources-title a {
@@ -2346,6 +2383,10 @@ a {
   font-size: 20px;
 }
 
+.button {
+  display: flex;
+  flex-direction: column;
+}
 .button button {
   border: none;
   padding: 20px 20px;
@@ -2355,12 +2396,17 @@ a {
   cursor: pointer;
   transition: all 300ms;
 }
+.button img {
+  height: 80px;
+  width: 80px;
+}
 .button button:hover {
   scale: 0.95;
 }
 
 .category-badge {
   background-color: #fdeee6;
+  color: #fc8441;
   padding: 12px 32px;
   margin-right: 20px;
   transition: all 300ms;
@@ -2376,6 +2422,10 @@ a {
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+}
+.tab button {
+  margin-top: 50px;
+  width: 400px;
 }
 
 /* Style for the active tab */
