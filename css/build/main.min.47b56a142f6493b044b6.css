@@ -584,7 +584,11 @@ body.open {
 
 h1 {
   font-size: clamp(3.8rem, 6vw + 1.2rem, 9.5rem);
-  line-height: 110px;
+}
+@media (min-width: 1200px) {
+  h1 {
+    line-height: 110px;
+  }
 }
 
 h2 {
@@ -968,6 +972,7 @@ a {
 }
 @media (min-width: 1200px) {
   .ps__tab-right {
+    padding: 100px;
     width: 70%;
   }
 }
@@ -2322,8 +2327,13 @@ a {
 }
 
 .rs__resources {
-  padding: 60px;
   background-color: #fdeee6;
+  padding: 20px;
+}
+@media (min-width: 1200px) {
+  .rs__resources {
+    padding: 60px;
+  }
 }
 .rs__resources .container {
   display: flex;
@@ -2342,7 +2352,7 @@ a {
   gap: 20px;
   text-align: center;
   color: #1e3056;
-  padding-bottom: 80px;
+  padding-bottom: 0px;
 }
 .rs__resources-title h3 {
   padding-bottom: 20px;
@@ -2425,7 +2435,8 @@ a {
 }
 .tab button {
   margin-top: 50px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 /* Style for the active tab */

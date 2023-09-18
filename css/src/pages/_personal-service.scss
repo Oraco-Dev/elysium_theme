@@ -73,6 +73,7 @@
     padding: 50px;
 
     @include media(">=desktop") {
+      padding: 100px;
       width: 70%;
     }
 
