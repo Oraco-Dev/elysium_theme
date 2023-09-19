@@ -194,7 +194,8 @@ $news_posts_query = new WP_Query(
                     <p>Elysium is a full service accountin and financial services firm with offices in Scoresby, Malvern
                         and Monbulk. With over 25 years of experience, we are ready to help you.</p>
                     <div class="fp__team-info-cta">
-                        <a href=""><button class="fp__team-info-cta-btn">Meet our Team</button></a>
+                        <a href="https://elysiumafs.previewsite.com.au/about/#our-team"><button
+                                class="fp__team-info-cta-btn">Meet our Team</button></a>
                         <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Vector-1.png"
                             class="fp__team-info-cta-icon" />
                     </div>
@@ -319,7 +320,7 @@ $news_posts_query = new WP_Query(
                 ?>
             </div>
             <div class="fp__news-btn">
-                <a href="https://elysiumafs.previewsite.com.au/blogs" target="_blank" class="fp__news-blog-btn">View all
+                <a href="https://elysiumafs.previewsite.com.au/blogs" class="fp__news-blog-btn">View all
                     Latest News & Articles <img
                         src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Arrow-1.png"
                         class="blog-card__meta-img" /></a>

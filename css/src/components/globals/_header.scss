@@ -60,7 +60,6 @@
 .hamburger {
   display: block;
   background-color: $primary-light;
-  border-radius: 12px;
   transition: all 300ms;
 
   &:hover {
@@ -141,18 +140,19 @@
 
     .menu-item-has-children {
       position: relative;
+      width: 100%;
     }
 
     .menu-item-has-children > a:first-of-type::before {
       position: absolute;
-      right: -30px;
+      right: -20px;
       top: 50%;
       transform: translateY(-40%);
       background-image: url("http://elancewebsitelocal.local/wp-content/uploads/2023/09/icons8-chevron-down-30.png");
-      height: 20px;
-      width: 20px;
-      background-size: 20px;
-
+      height: 12px;
+      width: 12px;
+      background-size: 12px;
+      pointer-events: none;
       content: "";
     }
 
@@ -187,6 +187,10 @@
 
       ul.sub-menu li {
         width: 100%;
+
+        a {
+          padding: 16px 12px;
+        }
       }
     }
 
@@ -197,7 +201,9 @@
 
     li ul.sub-menu a {
       background-color: $primary-color;
-      width: 160px;
+
+      width: fit-content;
+      min-width: 200px;
       padding: 10px;
       font-size: 16px;
 

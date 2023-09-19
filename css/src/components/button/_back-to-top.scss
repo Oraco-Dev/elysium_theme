@@ -1,0 +1,10 @@
+.bt__button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: $secondary-color;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  z-index: 10000;
+}

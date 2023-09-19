@@ -10,9 +10,9 @@ $button_link = $args['buttonLink'];
 <div class="abl">
 
     <div class="abl-left">
-        <h2 class="abl-left__title">
+        <h3 class="abl-left__title">
             <?php echo $title ?>
-        </h2>
+        </h3>
         <?php if ($subtitle): ?>
             <h4 class="abl-left__subtitle">
                 <?php echo $subtitle ?>

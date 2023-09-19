@@ -82,6 +82,9 @@ $mobileMenu = array(
     <div class="modal__outer">
       <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/icons8-close-window-50.png"
         alt="Close Modal Button" class="close-modal-btn" />
+      <div class="modal__outer-title">
+        <h4>Book your free assesment</h4>
+      </div>
       <?php echo do_shortcode('[contact-form-7 id="603a292" title="Book Your Free Assesment"]'); ?>
     </div>
   </div>
@@ -102,10 +105,10 @@ $mobileMenu = array(
           ?>
         </div>
         <div class="header__inner-right">
-          <a href="https://qsop.quickfee.com.au/#/company/quickfee/firm/elysium" target="_blank">
+          <a href="https://qsop.quickfee.com.au/#/company/quickfee/firm/elysium">
             <button class="header__inner-right-btn-blue header__inner-right-btn">Pay Online Now</button>
           </a>
-          <a href="https://elysiumafs.acclipse.com/clientportal" target="_blank">
+          <a href="https://elysiumafs.acclipse.com/clientportal">
             <button class="header__inner-right-btn-blue header__inner-right-btn">Client Portal</button>
           </a>
           <button class="header__inner-right-btn-orange header__inner-right-btn modal-btn">
@@ -123,3 +126,7 @@ $mobileMenu = array(
     </div>
     </div>
   </header>
+
+  <div class="bt__button">
+    <img src="" alt="" class="bt__button-img" />
+  </div>

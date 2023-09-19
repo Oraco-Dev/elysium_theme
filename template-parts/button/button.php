@@ -4,7 +4,7 @@ $button_link = $args['buttonLink'];
 $img_hidden = $args['imgHidden']
     ?>
 
-<a href="<?php echo $button_link ?>" target="_blank" class="button">
+<a href="<?php echo $button_link ?>" target="_blank" class="button-primary">
     <button>
         <?php echo $button_text ?>
     </button>

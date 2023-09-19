@@ -5,7 +5,7 @@ $linkIcon = $args['linkIcon'];
 $isTab = $args['isTab'];
 $index = $args['index'];
 ?>
-<!-- onclick="openTab('tab-<?php echo $index ?>')" -->
+
 
 <?php if ($isTab): ?>
     <div class="fp-grid__child tab-btn" id="tab-<?php echo $index ?>">
@@ -15,7 +15,7 @@ $index = $args['index'];
         </h5>
     </div>
 <?php else: ?>
-    <a href="<?php echo $link ?>" target="_blank" rel="noreferrer">
+    <a href="<?php echo $link ?>">
         <div class="fp-grid__child">
             <image src="<?php echo $linkIcon ?>" class="fp-grid__child-icon" />
             <h5>

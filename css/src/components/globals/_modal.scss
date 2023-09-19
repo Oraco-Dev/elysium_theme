@@ -17,6 +17,19 @@
     background-color: white;
     position: relative;
 
+    &-title {
+      background-color: $primary-color;
+      padding: 40px 40px 0px 40px;
+
+      h4 {
+        color: $secondary-color;
+        font-family: $Poppins;
+        width: 100%;
+        max-width: 400px;
+        font-weight: 400;
+      }
+    }
+
     img {
       position: absolute;
       top: 8px;

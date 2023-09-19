@@ -58,7 +58,7 @@ $footerQuickLinksMenu = array(
                             <span>Scoresby</span>
                         </div>
                         <p>1/2 Keith Campbell Court, Scoresby, VIC, 3179</p>
-                        <a href="">Get Directions <img
+                        <a href="https://goo.gl/maps/M1QSJV6k3yMWNDkg8">Get Directions <img
                                 src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Arrow-1.png"
                                 alt="Directions Arrow Icon" class="one__bottom-icon-direction" /></a>
                     </div>
@@ -70,7 +70,7 @@ $footerQuickLinksMenu = array(
                             </span>
                         </div>
                         <p>Suite 9, 1 Milton Parade, Malvern, VIC, 3144</p>
-                        <a href="">Get Directions <img
+                        <a href="https://goo.gl/maps/cJirhkomjttJmSq9A">Get Directions <img
                                 src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Arrow-1.png"
                                 alt="Directions Arrow Icon" class="one__bottom-icon-direction" /></a>
                     </div>
@@ -82,7 +82,7 @@ $footerQuickLinksMenu = array(
                             </span>
                         </div>
                         <p>130 Main Road, Monbulk, VIC, 3793</p>
-                        <a href="">Get Directions <img
+                        <a href="https://goo.gl/maps/uXyzCuJ1oskWRbLv9">Get Directions <img
                                 src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Arrow-1.png"
                                 alt="Directions Arrow Icon" class="one__bottom-icon-direction" /></a>
                     </div>
@@ -154,7 +154,7 @@ $footerQuickLinksMenu = array(
             </div>
 
         </div>
-        <hr />
+        <div class="footer__line-break"></div>
         <div class="footer__terms">
             <div>
                 <p>

@@ -130,7 +130,7 @@ get_header();
         <div class="about-box__outer">
             <div class="about-box__one">
                 <?php
-                get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $introtitle, 'subtitle' => $introsubtitle, 'imageUrl' => $introimage, 'content' => $introcontent, 'buttonLink' => '', 'buttonText' => ''));
+                get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $introtitle, 'subtitle' => $introsubtitle, 'imageUrl' => $introimage, 'content' => $introcontent, 'buttonLink' => '', 'buttonText' => '', 'isModalBtn' => false));
                 ?>
             </div>
             <div class="about-box__two">
@@ -140,13 +140,14 @@ get_header();
             </div>
             <div class="about-box__three">
                 <?php
-                get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $finaltitle, 'subtitle' => '', 'imageUrl' => $finalimage, 'content' => $finalcontent, 'buttonLink' => '', 'buttonText' => ''));
+                get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $finaltitle, 'subtitle' => '', 'imageUrl' => $finalimage, 'content' => $finalcontent, 'buttonLink' => '', 'buttonText' => '', 'isModalBtn' => false));
                 ?>
             </div>
         </div>
     </div>
 </section>
 
+<div id="our-team"></div>
 <section class="about__team">
     <div class="container">
         <div class="about__team-intro">

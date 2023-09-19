@@ -32,14 +32,14 @@ body {
 }
 
 h1 {
-  font-size: clamp(3.8rem, 6vw + 1.2rem, 9.5rem);
+  font-size: clamp(3.8rem, 6vw + 1.2rem, 8.5rem);
   @include media(">=desktop") {
-    line-height: 110px;
+    line-height: 95px;
   }
 }
 
 h2 {
-  font-size: clamp(3.2rem, 5vw + 1rem, 6.5rem);
+  font-size: clamp(3.2rem, 5vw + 1rem, 7.25rem);
 }
 
 h3 {

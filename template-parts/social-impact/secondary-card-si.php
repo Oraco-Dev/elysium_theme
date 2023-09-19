@@ -29,7 +29,7 @@ if (strlen($content) > $max_length) {
         <p class="si__posts-right-main-meta-content">
             <?php echo $trimmed_text ?>
         </p>
-        <a href="<?php echo $link ?>" target="_blank" rel="noreferrer">
+        <a href="<?php echo $link ?>">
             <button>Read More
                 <span>
                     <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Arrow-1.png"

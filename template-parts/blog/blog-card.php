@@ -14,8 +14,7 @@ if (!$is_home) {
 
 ?>
 
-<a href="<?php echo $link ?>" target="_blank" rel="noreferrer" class="<?php echo $blogCardClasses ?>"
-    data-category='<?php echo $all_categories ?>'>
+<a href="<?php echo $link ?>" class="<?php echo $blogCardClasses ?>" data-category='<?php echo $all_categories ?>'>
     <div class="blog-card__categories">
         <?php
         foreach ($all_categories_json as $category) {

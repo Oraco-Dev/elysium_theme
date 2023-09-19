@@ -13,9 +13,9 @@ $modal_button = $args['isModalBtn'];
         <!-- <img src="<?php echo $image_url ?>" alt="Free Assesment Image" /> -->
     </div>
     <div class="abr-right">
-        <h2 class="abr-right__title">
+        <h3 class="abr-right__title">
             <?php echo $title ?>
-        </h2>
+        </h3>
         <?php if ($subtitle): ?>
             <h4 class="abr-right__subtitle">
                 <?php echo $subtitle ?>
