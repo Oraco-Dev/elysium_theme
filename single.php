@@ -16,7 +16,8 @@ $date = get_post_field('post_date', $postID);
 $formattedDate = date('d/m/y', strtotime($date));
 $dateObj = DateTime::createFromFormat('d/m/y', $formattedDate);
 $formattedDateFinal = $dateObj->format('d M Y');
-$content = get_the_content($postID);
+$introcontent = get_field('first_paragraph', $postID);
+$content = get_field('content', $postID);
 $categories = get_the_category(); // Get the current post's categories
 // Extract category IDs and remove duplicates
 $category_ids = array_unique(wp_list_pluck($categories, 'term_id'));
@@ -59,6 +60,10 @@ get_header();
         </div>
         <div class="single-content">
             <div class="single-content__text">
+                <p>
+                    <?php echo $introcontent ?>
+                </p>
+                <br />
                 <p>
                     <?php echo $content ?>
                 </p>
