@@ -2,7 +2,7 @@
 
 .fp__banner {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -41,6 +41,9 @@
 
     &-left {
       width: 100%;
+      display: flex;
+      align-items: center;
+      height: 80vh;
 
       @include media(">=desktop") {
         width: 50%;
@@ -65,6 +68,7 @@
         background-color: $primary-color;
         border-bottom: 6px solid $secondary-color;
         max-width: 500px;
+        margin-bottom: 80px;
 
         h4 {
           font-family: $Poppins;
@@ -78,6 +82,10 @@
     &-title {
       color: $white;
       width: 100%;
+
+      @include media("<=phone") {
+        font-size: 60px;
+      }
 
       @include media(">=desktop") {
         max-width: 400px;
@@ -202,12 +210,20 @@
   &:after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
     height: 20vh;
     width: 100vw;
     background-color: $secondary-color;
     z-index: 1;
+    bottom: 0;
+    right: 0;
+    // background-image: url("http://elancewebsitelocal.local/wp-content/uploads/2023/08/EFS_DOt-Backgrounds-01-1.png");
+    // background-size: auto; /* Use 'cover' to cover the entire width and height */
+    // background-repeat: no-repeat;
+    // background-position: right; /* Position the background image on the right side */
+    // bottom: 0;
+    // right: 0;
+    // background-position: right;
+    // opacity: 0.5;
   }
 
   &-card {
@@ -403,6 +419,14 @@
       align-items: center;
       gap: 20px;
 
+      img {
+        display: none;
+
+        @include media(">=desktop") {
+          display: block;
+        }
+      }
+
       &-btn {
         border: none;
         padding: 24px 36px;
@@ -422,12 +446,26 @@
     &-right {
       position: relative;
       display: flex;
-
       width: 50%;
+
+      &-bg {
+        display: none;
+        position: absolute;
+        object-fit: cover;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.1;
+        z-index: 1;
+
+        @include media(">=desktop") {
+          display: block;
+        }
+      }
 
       &-imgone,
       &-imgtwo {
         object-fit: cover;
+        z-index: 2;
       }
 
       &-imgone {
@@ -618,11 +656,27 @@
       justify-content: center;
       gap: 20px;
       color: $primary-color;
+      width: 100%;
+
+      &.index-0 {
+        background-color: $primary-color;
+        color: $white;
+      }
+
+      &.index-1 {
+        background-color: $secondary-color;
+        color: $white;
+
+        button {
+          color: $white;
+        }
+      }
 
       button {
         font-size: 16px;
         font-family: $Playfair;
         color: $secondary-color;
+        cursor: pointer;
       }
     }
   }

@@ -1,5 +1,3 @@
-<!-- WORDPRESS TEMPLATE FOR HEADER -->
-
 <?php
 
 $headerAboutUsMenu = array(
@@ -30,6 +28,30 @@ $mobileMenu = array(
   'menu_class' => 'mobile__inner-menu-item',
   'menu_id' => 'mobile__inner-menu',
 );
+
+$business_services_query = new WP_Query(
+  array(
+    'post_type' => 'business_services',
+    'posts_per_page' => -1,
+    'orderby' => 'title',
+    // Sort by title in alphabetical order
+    'order' => 'ASC',
+    // Specify ascending order (A to Z)
+    // -1 to retrieve all posts
+  )
+);
+
+$personal_services_query = new WP_Query(
+  array(
+    'post_type' => 'personal_services',
+    'posts_per_page' => -1,
+    'orderby' => 'title',
+    // Sort by title in alphabetical order
+    'order' => 'ASC',
+    // Specify ascending order (A to Z)
+    // -1 to retrieve all posts
+  )
+);
 ?>
 
 
@@ -45,7 +67,7 @@ $mobileMenu = array(
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oraco Template Theme</title>
+  <title>Elysium Accounting</title>
   <?php wp_head(); ?>
 </head>
 
@@ -54,10 +76,70 @@ $mobileMenu = array(
   <div class="menu">
     <div class="container">
       <div class="menu__inner">
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5>Personal Services</h5>
+              <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/icons8-chevron-down-30.png" />
+            </div>
+            <div class="accordion-content">
+              <?php
+              if ($personal_services_query->have_posts()) {
+                while ($personal_services_query->have_posts()) {
+                  $personal_services_query->the_post();
 
+                  $title = get_the_title();
+                  $link = get_permalink();
+
+                  echo '<a href="' . $link . '" class="footer__link">' . $title . '</a>';
+                }
+                wp_reset_postdata(); // Reset the query
+              }
+              ?>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5>Business Services</h5>
+              <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/icons8-chevron-down-30.png" />
+            </div>
+            <div class="accordion-content">
+              <?php
+              if ($business_services_query->have_posts()) {
+                while ($business_services_query->have_posts()) {
+                  $business_services_query->the_post();
+
+                  $title = get_the_title();
+                  $link = get_permalink();
+
+                  echo '<a href="' . $link . '" class="footer__link">' . $title . '</a>';
+                }
+                wp_reset_postdata(); // Reset the query
+              }
+              ?>
+            </div>
+          </div>
+        </div>
         <?php
         wp_nav_menu($mobileMenu);
         ?>
+
+        <div class="menu__inner-btns-box">
+          <div class="menu__inner-btns-box-btns">
+            <a href="https://qsop.quickfee.com.au/#/company/quickfee/firm/elysium" class="blue-btn">
+              <button>Pay Online Now</button>
+            </a>
+            <a href="https://elysiumafs.acclipse.com/clientportal" class="blue-btn">
+              <button>Client Portal</button>
+            </a>
+          </div>
+          <a href="https://elysiumafs.previewsite.com.au/contact" class="orange-btn">
+            <button>
+              Get a Free Assesment
+            </button>
+          </a>
+        </div>
+
         <div class="footer__socials">
           <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/Xero-Certified-1.png"
             class="footer__socials-xero" />
@@ -73,9 +155,14 @@ $mobileMenu = array(
                 class="footer__socials-row-icon" /></a>
           </div>
         </div>
-
       </div>
+
+
+
+
+
     </div>
+  </div>
   </div>
 
   <div class="modal">
@@ -128,5 +215,6 @@ $mobileMenu = array(
   </header>
 
   <div class="bt__button">
-    <img src="" alt="" class="bt__button-img" />
+    <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/icons8-up-arrow-50.png" alt=""
+      class="bt__button-img" />
   </div>

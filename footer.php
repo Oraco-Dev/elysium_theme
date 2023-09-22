@@ -4,6 +4,10 @@ $business_services_query = new WP_Query(
     array(
         'post_type' => 'business_services',
         'posts_per_page' => -1,
+        'orderby' => 'title',
+        // Sort by title in alphabetical order
+        'order' => 'ASC',
+        // Specify ascending order (A to Z)
         // -1 to retrieve all posts
     )
 );
@@ -12,6 +16,10 @@ $personal_services_query = new WP_Query(
     array(
         'post_type' => 'personal_services',
         'posts_per_page' => -1,
+        'orderby' => 'title',
+        // Sort by title in alphabetical order
+        'order' => 'ASC',
+        // Specify ascending order (A to Z)
         // -1 to retrieve all posts
     )
 );
@@ -88,7 +96,7 @@ $footerQuickLinksMenu = array(
                     </div>
                 </div>
             </div>
-            <div class="footer__inner-col">
+            <div class="footer__inner-col services-one">
                 <h5>Business</h5>
                 <div class="footer__inner-col-links">
                     <?php
@@ -106,7 +114,41 @@ $footerQuickLinksMenu = array(
                     ?>
                 </div>
             </div>
-            <div class="footer__inner-col">
+            <div class="footer__inner-col services-two">
+                <h5>Business</h5>
+                <div class="footer__inner-col-links">
+                    <?php
+                    if ($business_services_query->have_posts()) {
+                        while ($business_services_query->have_posts()) {
+                            $business_services_query->the_post();
+
+                            $title = get_the_title();
+                            $link = get_permalink();
+
+                            echo '<a href="' . $link . '" class="footer__link">' . $title . '</a>';
+                        }
+                        wp_reset_postdata(); // Reset the query
+                    }
+                    ?>
+                </div>
+                <h5 style="padding-top:20px;">Personal</h5>
+                <div class="footer__inner-col-links">
+                    <?php
+                    if ($personal_services_query->have_posts()) {
+                        while ($personal_services_query->have_posts()) {
+                            $personal_services_query->the_post();
+
+                            $title = get_the_title();
+                            $link = get_permalink();
+
+                            echo '<a href="' . $link . '" class="footer__link">' . $title . '</a>';
+                        }
+                        wp_reset_postdata(); // Reset the query
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class="footer__inner-col services-one">
                 <h5>Personal</h5>
                 <div class="footer__inner-col-links">
                     <?php

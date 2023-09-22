@@ -9,6 +9,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/src/components/accordion.js":
+/*!****************************************!*\
+  !*** ./js/src/components/accordion.js ***!
+  \****************************************/
+/***/ (() => {
+
+eval("var accordionItems = document.querySelectorAll(\".accordion-item\");\naccordionItems.forEach(function (item) {\n  var header = item.querySelector(\".accordion-header\");\n  var content = item.querySelector(\".accordion-content\");\n  header.addEventListener(\"click\", function () {\n    // Close all accordion items first\n    accordionItems.forEach(function (otherItem) {\n      if (otherItem !== item) {\n        otherItem.querySelector(\".accordion-content\").classList.remove(\"active\");\n      }\n    }); // Toggle the active class for the clicked item\n\n    content.classList.toggle(\"active\");\n  });\n});\n\n//# sourceURL=webpack://wp-barebone-theme-webpack5-sass/./js/src/components/accordion.js?");
+
+/***/ }),
+
 /***/ "./js/src/components/menu.js":
 /*!***********************************!*\
   !*** ./js/src/components/menu.js ***!
@@ -26,6 +36,16 @@ eval("var menu = document.querySelector(\".menu\");\nvar body = document.body;\n
 /***/ (() => {
 
 eval("var modal = document.querySelector(\".modal\");\nvar modalBtn = document.querySelectorAll(\".modal-btn\");\nvar closeModalbtn = document.querySelector(\".close-modal-btn\");\nmodalBtn.forEach(function (button) {\n  button.addEventListener(\"click\", function () {\n    modal.classList.add(\"open\");\n  });\n});\ncloseModalbtn.addEventListener(\"click\", function () {\n  console.log(123);\n  modal.classList.remove(\"open\");\n});\n\n//# sourceURL=webpack://wp-barebone-theme-webpack5-sass/./js/src/components/modal.js?");
+
+/***/ }),
+
+/***/ "./js/src/helpers/backToTop.js":
+/*!*************************************!*\
+  !*** ./js/src/helpers/backToTop.js ***!
+  \*************************************/
+/***/ (() => {
+
+eval("var scrollToTopButton = document.querySelector(\".bt__button\"); // Add a click event listener to the button\n\nscrollToTopButton.addEventListener(\"click\", function () {\n  // Scroll to the top of the page\n  window.scroll({\n    top: 0,\n    left: 0,\n    behavior: \"smooth\" // This provides a smooth scrolling effect (optional)\n\n  });\n});\n\n//# sourceURL=webpack://wp-barebone-theme-webpack5-sass/./js/src/helpers/backToTop.js?");
 
 /***/ }),
 
@@ -68,7 +88,7 @@ eval("var tabButtons = document.querySelectorAll(\".tab-btn\");\ndocument.addEve
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _helpers_fliterPosts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers/fliterPosts */ \"./js/src/helpers/fliterPosts.js\");\n/* harmony import */ var _helpers_categoryFilters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers/categoryFilters */ \"./js/src/helpers/categoryFilters.js\");\n/* harmony import */ var _helpers_tabPosts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers/tabPosts */ \"./js/src/helpers/tabPosts.js\");\n/* harmony import */ var _helpers_tabPosts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_helpers_tabPosts__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/modal */ \"./js/src/components/modal.js\");\n/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/menu */ \"./js/src/components/menu.js\");\n/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_menu__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack://wp-barebone-theme-webpack5-sass/./js/src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _helpers_fliterPosts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers/fliterPosts */ \"./js/src/helpers/fliterPosts.js\");\n/* harmony import */ var _helpers_categoryFilters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers/categoryFilters */ \"./js/src/helpers/categoryFilters.js\");\n/* harmony import */ var _helpers_tabPosts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers/tabPosts */ \"./js/src/helpers/tabPosts.js\");\n/* harmony import */ var _helpers_tabPosts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_helpers_tabPosts__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _helpers_backToTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/backToTop */ \"./js/src/helpers/backToTop.js\");\n/* harmony import */ var _helpers_backToTop__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_helpers_backToTop__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/modal */ \"./js/src/components/modal.js\");\n/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/menu */ \"./js/src/components/menu.js\");\n/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_menu__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/accordion */ \"./js/src/components/accordion.js\");\n/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://wp-barebone-theme-webpack5-sass/./js/src/main.js?");
 
 /***/ }),
 

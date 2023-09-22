@@ -251,6 +251,48 @@
   background-color: #4d5f85;
 }
 
+.accordion {
+  width: 100%;
+}
+
+.accordion-item {
+  margin-bottom: 5px;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+.accordion-header h5 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.accordion-content {
+  color: #ffffff;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out; /* Add a transition for smooth animation */
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 16px;
+}
+.accordion-content a {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.accordion-content.active {
+  max-height: 500px; /* Adjust the max-height as needed to accommodate your content */
+  padding-bottom: 20px;
+}
+
 .footer {
   width: 100%;
   background-color: #1e3056;
@@ -295,6 +337,32 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.footer__inner-col.services-one {
+  display: block;
+}
+@media (min-width: 768px) {
+  .footer__inner-col.services-one {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__inner-col.services-one {
+    display: block;
+  }
+}
+.footer__inner-col.services-two {
+  display: none;
+}
+@media (min-width: 768px) {
+  .footer__inner-col.services-two {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__inner-col.services-two {
+    display: none;
+  }
 }
 .footer__inner .one__top-row {
   display: flex;
@@ -365,6 +433,7 @@
   gap: 20px;
   width: 100%;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 .footer__socials-xero {
   width: 200px;
@@ -534,7 +603,42 @@
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  padding-top: 40px;
+  padding-top: 35vh;
+}
+@media (max-width: 380px) {
+  .menu__inner {
+    padding-top: 80vh;
+  }
+}
+.menu__inner-btns-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu__inner-btns-box-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.menu__inner-btns-box a {
+  width: 100%;
+}
+.menu__inner-btns-box button {
+  padding: 24px;
+  background-color: #fc8441;
+  outline: none;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  border: 0px;
+  width: 100%;
+}
+.menu__inner-btns-box .blue-btn button {
+  background-color: #4d5f85;
+}
+.menu__inner-btns-box .orange-btn button {
+  background-color: #fc8441;
 }
 .menu.close {
   animation: hideMenu 0.9s cubic-bezier(0.405, 0, 0.025, 1);
@@ -568,7 +672,7 @@
 #mobile__inner-menu li a {
   color: #ffffff;
   font-family: "Poppins", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   transition: 300ms all linear;
 }
 #mobile__inner-menu li a:hover {
@@ -1027,7 +1131,6 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 40px;
   padding-bottom: 20px;
   color: #1e3056;
 }
@@ -1038,7 +1141,7 @@ a {
 
 .fp__banner {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1075,6 +1178,9 @@ a {
 }
 .fp__banner-inner-left {
   width: 100%;
+  display: flex;
+  align-items: center;
+  height: 80vh;
 }
 @media (min-width: 1200px) {
   .fp__banner-inner-left {
@@ -1100,6 +1206,7 @@ a {
   background-color: #1e3056;
   border-bottom: 6px solid #fc8441;
   max-width: 500px;
+  margin-bottom: 80px;
 }
 .fp__banner-inner-right-form h4 {
   font-family: "Poppins", sans-serif;
@@ -1110,6 +1217,11 @@ a {
 .fp__banner-inner-title {
   color: #ffffff;
   width: 100%;
+}
+@media (max-width: 576px) {
+  .fp__banner-inner-title {
+    font-size: 60px;
+  }
 }
 @media (min-width: 1200px) {
   .fp__banner-inner-title {
@@ -1219,12 +1331,12 @@ a {
 .fp__personal:after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
   height: 20vh;
   width: 100vw;
   background-color: #fc8441;
   z-index: 1;
+  bottom: 0;
+  right: 0;
 }
 .fp__personal-card {
   display: flex;
@@ -1410,6 +1522,14 @@ a {
   align-items: center;
   gap: 20px;
 }
+.fp__team-info-cta img {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .fp__team-info-cta img {
+    display: block;
+  }
+}
 .fp__team-info-cta-btn {
   border: none;
   padding: 24px 36px;
@@ -1428,8 +1548,23 @@ a {
   display: flex;
   width: 50%;
 }
+.fp__team-info-right-bg {
+  display: none;
+  position: absolute;
+  object-fit: cover;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.1;
+  z-index: 1;
+}
+@media (min-width: 1200px) {
+  .fp__team-info-right-bg {
+    display: block;
+  }
+}
 .fp__team-info-right-imgone, .fp__team-info-right-imgtwo {
   object-fit: cover;
+  z-index: 2;
 }
 .fp__team-info-right-imgone {
   width: 100%;
@@ -1596,11 +1731,24 @@ a {
   justify-content: center;
   gap: 20px;
   color: #1e3056;
+  width: 100%;
+}
+.fp__impact .fp__impact-card-meta.index-0 {
+  background-color: #1e3056;
+  color: #ffffff;
+}
+.fp__impact .fp__impact-card-meta.index-1 {
+  background-color: #fc8441;
+  color: #ffffff;
+}
+.fp__impact .fp__impact-card-meta.index-1 button {
+  color: #ffffff;
 }
 .fp__impact .fp__impact-card-meta button {
   font-size: 16px;
   font-family: "Playfair Display", serif;
   color: #fc8441;
+  cursor: pointer;
 }
 .fp__impact-more {
   margin-top: 40px;
@@ -2346,8 +2494,12 @@ a {
 
 .cs__container {
   padding-top: 100px;
-  padding-bottom: 100px;
   background-color: #fdeee6;
+}
+@media (min-width: 1200px) {
+  .cs__container {
+    padding-bottom: 100px;
+  }
 }
 .cs__container .container {
   display: flex;
@@ -2490,6 +2642,13 @@ a {
   width: 50px;
   border-radius: 50%;
   z-index: 10000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bt__button-img {
+  height: 50%;
 }
 
 .category-badge {

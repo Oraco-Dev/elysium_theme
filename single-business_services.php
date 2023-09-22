@@ -58,7 +58,7 @@ $business_services_query = new WP_Query(
         <?php if ($featured_image_url): ?>
             <img src="<?php echo $featured_image_url ?>" alt="" class="ps__banner-img" />
         <?php else: ?>
-            <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/nathan-dumlao-Wr3comVZJxU-unsplash-2-1-2-min-1.png"
+            <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/businessman-using-calculator-2022-11-11-18-15-35-utc.jpg"
                 alt="" class="ps__banner-img" />
         <?php endif; ?>
 

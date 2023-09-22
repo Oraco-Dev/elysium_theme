@@ -23,8 +23,15 @@ if (!$is_home) {
         ?>
     </div>
     <div class="blog-card__image-container">
-        <img src="<?php echo esc_url($image_url) ?>" class="blog-card__img" />
-        <div class="blog-card__overlay"></div> <!-- Overlay for the image -->
+        <?php if ($image_url): ?>
+            <img src="<?php echo esc_url($image_url) ?>" class="blog-card__img" />
+            <div class="blog-card__overlay"></div> <!-- Overlay for the image -->
+        <?php else: ?>
+            <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/towfiqu-barbhuiya-JhevWHCbVyw-unsplash-1-min-2-scaled.jpg"
+                alt="" class="blog-card__img" />
+            <div class="blog-card__overlay"></div> <!-- Overlay for the image -->
+        <?php endif; ?>
+
     </div>
     <div class="blog-card__meta">
         <h5>

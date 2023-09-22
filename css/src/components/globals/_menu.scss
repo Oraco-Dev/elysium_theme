@@ -18,7 +18,51 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    padding-top: 40px;
+    padding-top: 35vh;
+
+    @media (max-width: 380px) {
+      padding-top: 80vh;
+    }
+
+    &-btns-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &-btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      a {
+        width: 100%;
+      }
+
+      button {
+        padding: 24px;
+        background-color: $secondary-color;
+        outline: none;
+        color: $white;
+        font-family: $Poppins;
+        font-size: 14px;
+        border: 0px;
+        width: 100%;
+      }
+
+      .blue-btn {
+        button {
+          background-color: $primary-light;
+        }
+      }
+
+      .orange-btn {
+        button {
+          background-color: $secondary-color;
+        }
+      }
+    }
   }
 
   &.close {
@@ -62,7 +106,7 @@
   li a {
     color: $white;
     font-family: $Poppins;
-    font-size: 24px;
+    font-size: 20px;
     transition: 300ms all linear;
 
     &:hover {

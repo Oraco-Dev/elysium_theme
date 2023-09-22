@@ -201,6 +201,8 @@ $news_posts_query = new WP_Query(
                     </div>
                 </div>
                 <div class="fp__team-info-right">
+                    <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/EFS_DOt-Backgrounds-01-1.png"
+                        class="fp__team-info-right-bg" />
                     <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/Artboard-1EFS_.png"
                         class="fp__team-info-right-imgone" />
                     <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/08/EFS_EFS_-1.png"
@@ -220,7 +222,6 @@ $news_posts_query = new WP_Query(
             </div>
             <div class="fp__review-cards">
                 <?php do_action('wprev_pro_plugin_action', 1); ?>
-                <!-- ADD SHORTCODE HERE FOR GOOGLE REVIEWS -->
             </div>
         </div>
     </section>
@@ -236,6 +237,7 @@ $news_posts_query = new WP_Query(
                 <div class="fp__impact-blog-left">
                     <?php
                     if ($social_impact_main_query->have_posts()) {
+
                         while ($social_impact_main_query->have_posts()) {
                             $social_impact_main_query->the_post();
 
@@ -254,6 +256,7 @@ $news_posts_query = new WP_Query(
 
                     <?php
                     if ($social_impact_secondary_query->have_posts()) {
+                        $index = 0;
                         while ($social_impact_secondary_query->have_posts()) {
                             $social_impact_secondary_query->the_post();
 
@@ -262,7 +265,9 @@ $news_posts_query = new WP_Query(
                             $image_url = get_the_post_thumbnail_url(get_the_ID());
 
 
-                            get_template_part('template-parts/social-impact/secondary-card-fp', null, array('title' => $title, 'link' => $link, 'imageUrl' => $image_url));
+                            get_template_part('template-parts/social-impact/secondary-card-fp', null, array('title' => $title, 'link' => $link, 'imageUrl' => $image_url, 'index' => $index));
+
+                            $index++;
                         }
                         wp_reset_postdata(); // Reset the query
                     }
