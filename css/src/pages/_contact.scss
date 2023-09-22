@@ -118,8 +118,11 @@
 }
 
 .locations {
-  padding: 40px;
   background-color: $primary-color;
+
+  @include media(">=desktop") {
+    padding: 40px;
+  }
 
   &-outer {
     width: 100%;

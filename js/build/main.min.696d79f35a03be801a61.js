@@ -15,7 +15,7 @@
   \****************************************/
 /***/ (() => {
 
-eval("var accordionItems = document.querySelectorAll(\".accordion-item\");\naccordionItems.forEach(function (item) {\n  var header = item.querySelector(\".accordion-header\");\n  var content = item.querySelector(\".accordion-content\");\n  header.addEventListener(\"click\", function () {\n    // Close all accordion items first\n    accordionItems.forEach(function (otherItem) {\n      if (otherItem !== item) {\n        otherItem.querySelector(\".accordion-content\").classList.remove(\"active\");\n      }\n    }); // Toggle the active class for the clicked item\n\n    content.classList.toggle(\"active\");\n  });\n});\n\n//# sourceURL=webpack://wp-barebone-theme-webpack5-sass/./js/src/components/accordion.js?");
+eval("var accordionItems = document.querySelectorAll(\".accordion-item\");\naccordionItems.forEach(function (item) {\n  var header = item.querySelector(\".accordion-header\");\n  var content = item.querySelector(\".accordion-content\");\n  header.addEventListener(\"click\", function () {\n    // Close all accordion items first\n    accordionItems.forEach(function (otherItem) {\n      if (otherItem !== item) {\n        otherItem.querySelector(\".accordion-content\").classList.remove(\"active\");\n        otherItem.querySelector(\".accordion-header\").classList.remove(\"active\");\n      }\n    }); // Toggle the active class for the clicked item\n\n    content.classList.toggle(\"active\");\n    header.classList.toggle(\"active\");\n  });\n});\n\n//# sourceURL=webpack://wp-barebone-theme-webpack5-sass/./js/src/components/accordion.js?");
 
 /***/ }),
 

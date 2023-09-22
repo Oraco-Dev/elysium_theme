@@ -11,10 +11,12 @@ accordionItems.forEach((item) => {
         otherItem
           .querySelector(".accordion-content")
           .classList.remove("active");
+        otherItem.querySelector(".accordion-header").classList.remove("active");
       }
     });
 
     // Toggle the active class for the clicked item
     content.classList.toggle("active");
+    header.classList.toggle("active");
   });
 });

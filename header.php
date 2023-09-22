@@ -119,11 +119,51 @@ $personal_services_query = new WP_Query(
               ?>
             </div>
           </div>
-        </div>
-        <?php
-        wp_nav_menu($mobileMenu);
-        ?>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5>About Us</h5>
+              <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/icons8-chevron-down-30.png" />
+            </div>
+            <div class="accordion-content">
+              <?php
+              // Check if the menu exists
+              $menu_items = wp_get_nav_menu_items('Header - About Us'); // Get menu items by menu name
+              
+              if ($menu_items) {
+                foreach ($menu_items as $menu_item) {
+                  $title = $menu_item->title;
+                  $link = $menu_item->url;
 
+                  echo '<a href="' . $link . '" class="footer__link">' . $title . '</a>';
+                }
+              }
+
+              ?>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h5>News & Resources</h5>
+              <img src="http://elancewebsitelocal.local/wp-content/uploads/2023/09/icons8-chevron-down-30.png" />
+            </div>
+            <div class="accordion-content">
+              <?php
+              // Check if the menu exists
+              $menu_items = wp_get_nav_menu_items('Header - News & Resources'); // Get menu items by menu name
+              
+              if ($menu_items) {
+                foreach ($menu_items as $menu_item) {
+                  $title = $menu_item->title;
+                  $link = $menu_item->url;
+
+                  echo '<a href="' . $link . '" class="footer__link">' . $title . '</a>';
+                }
+              }
+
+              ?>
+            </div>
+          </div>
+        </div>
         <div class="menu__inner-btns-box">
           <div class="menu__inner-btns-box-btns">
             <a href="https://qsop.quickfee.com.au/#/company/quickfee/firm/elysium" class="blue-btn">
