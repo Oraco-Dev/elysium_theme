@@ -336,7 +336,7 @@ $news_posts_query = new WP_Query(
     <section class="fp__assessment">
         <div class="container">
             <?php
-            get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $freeAssessmentTitle, 'imageUrl' => $freeAssessmentImage, 'content' => $freeAssessmentContent, 'buttonText' => $freeAssessmentButtonText, 'buttonLink' => '', 'subtitle' => '', 'isModalBtn' => true));
+            get_template_part('template-parts/alt-box/alt-box-right', null, array('isCaseStudy' => false, 'businessContent' => '', 'goalsContent' => '', 'outcomeContent' => '', 'title' => $freeAssessmentTitle, 'imageUrl' => $freeAssessmentImage, 'content' => $freeAssessmentContent, 'buttonText' => $freeAssessmentButtonText, 'buttonLink' => '', 'subtitle' => '', 'isModalBtn' => true));
             ?>
         </div>
     </section>

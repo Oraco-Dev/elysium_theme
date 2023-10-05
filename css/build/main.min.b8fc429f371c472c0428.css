@@ -764,10 +764,33 @@ a {
   }
 }
 .abr-left {
+  position: relative;
   width: 100%;
   background-size: cover;
   background-position: center;
   min-height: 300px;
+}
+.abr-left__snippet {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fc8441;
+  color: #ffffff;
+  width: 80%;
+  max-width: 700px;
+  padding: 8rem;
+}
+@media (min-width: 1200px) {
+  .abr-left__snippet {
+    display: block;
+  }
+}
+.abr-left__snippet p {
+  font-size: 2.6rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 4%;
+  line-height: 4rem;
 }
 .abr-right {
   width: 100%;
@@ -793,6 +816,9 @@ a {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   margin-bottom: 10px;
+}
+.abr-right__study {
+  padding-top: 5rem;
 }
 .abr-right p,
 .abr-right span {

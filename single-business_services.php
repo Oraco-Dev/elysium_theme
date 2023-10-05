@@ -157,7 +157,7 @@ $business_services_query = new WP_Query(
     <section class="ps__alt-box">
         <div class="container">
             <?php
-            get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $baTitle, 'imageUrl' => $baImage, 'content' => $baContent, 'buttonText' => '$baBtnText', 'buttonLink' => '', 'subtitle' => $baSubtitle, 'isModalBtn' => true));
+            get_template_part('template-parts/alt-box/alt-box-right', null, array('isCaseStudy' => false, 'businessContent' => '', 'goalsContent' => '', 'outcomeContent' => '', 'title' => $baTitle, 'imageUrl' => $baImage, 'content' => $baContent, 'buttonText' => '$baBtnText', 'buttonLink' => '', 'subtitle' => $baSubtitle, 'isModalBtn' => true));
             ?>
         </div>
     </section>

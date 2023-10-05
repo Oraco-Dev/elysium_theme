@@ -130,7 +130,7 @@ get_header();
         <div class="about-box__outer">
             <div class="about-box__one">
                 <?php
-                get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $introtitle, 'subtitle' => $introsubtitle, 'imageUrl' => $introimage, 'content' => $introcontent, 'buttonLink' => '', 'buttonText' => '', 'isModalBtn' => false));
+                get_template_part('template-parts/alt-box/alt-box-right', null, array('isCaseStudy' => false, 'businessContent' => '', 'goalsContent' => '', 'outcomeContent' => '', 'title' => $introtitle, 'subtitle' => $introsubtitle, 'imageUrl' => $introimage, 'content' => $introcontent, 'buttonLink' => '', 'buttonText' => '', 'isModalBtn' => false));
                 ?>
             </div>
             <div class="about-box__two">
@@ -140,7 +140,7 @@ get_header();
             </div>
             <div class="about-box__three">
                 <?php
-                get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $finaltitle, 'subtitle' => '', 'imageUrl' => $finalimage, 'content' => $finalcontent, 'buttonLink' => '', 'buttonText' => '', 'isModalBtn' => false));
+                get_template_part('template-parts/alt-box/alt-box-right', null, array('isCaseStudy' => false, 'businessContent' => '', 'goalsContent' => '', 'outcomeContent' => '', 'title' => $finaltitle, 'subtitle' => '', 'imageUrl' => $finalimage, 'content' => $finalcontent, 'buttonLink' => '', 'buttonText' => '', 'isModalBtn' => false));
                 ?>
             </div>
         </div>

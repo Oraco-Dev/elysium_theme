@@ -35,12 +35,15 @@ get_header();
                 $title = get_the_title();
                 $image_url = get_the_post_thumbnail_url(get_the_ID());
                 $content = get_the_content();
+                $business_content = get_field('business_description_-_content', get_the_ID());
+                $goals_content = get_field('goals_-_content', get_the_ID());
+                $outcome_content = get_field('outcome_-_content', get_the_ID());
 
 
                 // Check if the counter is even or odd
                 if ($counter % 2 == 0) {
                     // Counter is even, load a template for even posts
-                    get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $title, 'buttonLink' => '', 'imageUrl' => $image_url, 'buttonText' => '', 'subtitle' => '', 'content' => $content, 'isModalBtn' => false));
+                    get_template_part('template-parts/alt-box/alt-box-right', null, array('title' => $title, 'buttonLink' => '', 'imageUrl' => $image_url, 'buttonText' => '', 'subtitle' => '', 'content' => $content, 'isModalBtn' => false, 'isCaseStudy' => true, 'businessContent' => $business_content, 'goalsContent' => $goals_content, 'outcomeContent' => $outcome_content));
                 } else {
                     // Counter is odd, load a template for odd posts
                     get_template_part('template-parts/alt-box/alt-box-left', null, array('title' => $title, 'buttonLink' => '', 'imageUrl' => $image_url, 'buttonText' => '', 'subtitle' => '', 'content' => $content));
